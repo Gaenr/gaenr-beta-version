@@ -20,5 +20,5 @@ export default function PWARegister() {
 			})
 		}
 	}, [])
-	return <div>PwaRegister</div>
+	return null
 }
