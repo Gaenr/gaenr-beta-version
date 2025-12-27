@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { DM_Sans, Space_Mono } from 'next/font/google'
 
+import PWARegister from '@/components/features/pwa-register'
 import Footer from '@/components/ui/footer'
 import HotToast from '@/components/ui/hot-toast'
 import NavBar from '@/components/ui/navbar'
@@ -27,7 +28,12 @@ export const metadata: Metadata = {
 		template: 'Gaenr | %s'
 	},
 	description: '',
-	keywords: ['']
+	keywords: [''],
+	appleWebApp: {
+		capable: true,
+		title: '',
+		statusBarStyle: 'black-translucent'
+	}
 }
 
 export default function RootLayout({
@@ -39,6 +45,7 @@ export default function RootLayout({
 		<html lang="en">
 			<body
 				className={`${dmSans.variable} ${spaceMono.variable} text-foreground bg-background grid min-h-dvh grid-rows-[max-content_1fr] font-sans antialiased`}>
+				<PWARegister />
 				<NavBar />
 				{children}
 				<Footer />
