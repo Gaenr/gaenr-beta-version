@@ -68,7 +68,7 @@ export default function Header() {
 				</section>
 			</div>
 
-			<div className="absolute bottom-1/8 left-0 hidden h-32 w-16 rounded-tr-full rounded-br-full bg-blue-200/30 saturate-150 2xl:block"></div>
+			<div className="absolute bottom-1/8 left-0 hidden h-32 w-16 rounded-tr-full rounded-br-full bg-blue-200/30 shadow-md saturate-150 2xl:block"></div>
 		</header>
 	)
 }
