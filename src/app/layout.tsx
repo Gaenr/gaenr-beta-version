@@ -51,8 +51,8 @@ export default function RootLayout({
 				<Footer />
 
 				<InstallPrompt />
-				<HotToast />
 				<PWARegister />
+				<HotToast />
 			</body>
 		</html>
 	)

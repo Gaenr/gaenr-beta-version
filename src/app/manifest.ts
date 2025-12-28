@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
 	return {
 		name: 'Gaenr',
 		short_name: 'Gaenr',
-		description: '',
+		description: 'Install Gaenr for fast, seamless access anytime.',
 		start_url: '/',
 		display: 'standalone',
 		background_color: '#ffffff',
