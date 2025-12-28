@@ -38,7 +38,7 @@ export default function NavBar() {
 
 	return (
 		<>
-			<nav className="sticky inset-x-0 top-0 z-8000 flex h-auto w-full flex-wrap items-center justify-center border-b border-zinc-100 bg-white/70 backdrop-blur-lg backdrop-saturate-150">
+			<nav className="sticky inset-x-0 top-0 z-50 flex h-auto w-full flex-wrap items-center justify-center border-b border-zinc-100 bg-white/70 backdrop-blur-lg backdrop-saturate-150">
 				<div className="max-w-8xl flex h-(--navbar-height) w-full flex-nowrap items-center justify-between px-6">
 					<ul>
 						<li>
@@ -109,7 +109,7 @@ export default function NavBar() {
 						<li>
 							<Link
 								href="/"
-								className="from-brand-600 to-brand-700 rounded-full bg-linear-to-br px-4 py-2 text-sm font-medium tracking-wide text-white capitalize duration-200">
+								className="from-brand-600 to-brand-700 rounded-full bg-linear-to-br px-4 py-2 text-sm font-medium tracking-wide text-white">
 								Assign Task
 							</Link>
 						</li>
@@ -128,7 +128,7 @@ export default function NavBar() {
 							stiffness: 300,
 							mass: 0.5
 						}}
-						className="fixed inset-x-0 top-(--navbar-height) z-999 flex h-[calc(100vh-var(--navbar-height))] origin-top flex-col border-b border-zinc-100 bg-white/90 p-8 backdrop-blur-lg backdrop-saturate-150 lg:hidden"
+						className="fixed inset-x-0 top-(--navbar-height) z-40 flex h-[calc(100vh-var(--navbar-height))] origin-top flex-col border-b border-zinc-100 bg-white/90 p-8 backdrop-blur-lg backdrop-saturate-150 lg:hidden"
 						key="menu">
 						<ul className="flex max-w-full flex-col gap-y-4">
 							<li className="mb-2">

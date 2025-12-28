@@ -20,6 +20,7 @@
 # production
 /build
 /design-guidelines
+/public/sw.js
 
 # misc
 .DS_Store

@@ -2,7 +2,7 @@ export default function Page() {
 	return (
 		<main className="layout-spacing container-lg space-y-20">
 			<header className="flex flex-col items-center">
-				<h1 className="text-primary text-3xl font-bold">About Us</h1>
+				<h1 className="text-primary text-3xl font-bold">About</h1>
 				<h2 className="mt-4 mb-6 text-2xl font-bold">
 					RESHAPING HOW TALENT AND OPPORTUNITY CONNECT
 				</h2>
