@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { DM_Sans, Space_Mono } from 'next/font/google'
 
-import InstallPrompt from '@/components/features/install-prompt'
 import PWARegister from '@/components/features/pwa-register'
 import Footer from '@/components/ui/footer'
 import HotToast from '@/components/ui/hot-toast'
@@ -50,7 +49,6 @@ export default function RootLayout({
 				{children}
 				<Footer />
 
-				<InstallPrompt />
 				<PWARegister />
 				<HotToast />
 			</body>
