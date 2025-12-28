@@ -1,18 +1,29 @@
 'use client'
 
-import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 
 import { SearchIcon } from '@/components/icons'
 
 export default function SearchBar() {
-	const searchParams = useSearchParams()
 	const router = useRouter()
-	const pathname = usePathname()
+
+	function setSearch(formData: FormData) {
+		const search = formData.get('search') as string
+
+		const params = new URLSearchParams(window.location.search)
+		params.set('search', search)
+
+		if (!search) return
+		router.replace(`/services?${params.toString()}`, {
+			scroll: false
+		})
+	}
 
 	return (
-		<form className="flex items-center">
+		<form className="flex items-center" action={setSearch}>
 			<input
 				type="text"
+				name="search"
 				placeholder='Search To "Find Services"'
 				autoComplete="OFF"
 				className="block h-12 w-full self-stretch rounded-full bg-white pr-18 pl-4 text-sm font-medium outline-2 outline-offset-2 outline-transparent placeholder:text-zinc-400 focus:outline-white"

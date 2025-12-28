@@ -8,6 +8,7 @@ import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 
 import { CloseIcon, MenuIcon } from '@/components/icons'
+import Button from './button'
 
 const navLinks = [
 	{
@@ -107,10 +108,8 @@ export default function NavBar() {
 							</li>
 						))}
 						<li>
-							<Link
-								href="/"
-								className="from-brand-600 to-brand-700 rounded-full bg-linear-to-br px-4 py-2 text-sm font-medium tracking-wide text-white">
-								Assign Task
+							<Link href="/assign-task">
+								<Button color="primary">Assign Task</Button>
 							</Link>
 						</li>
 					</ul>
@@ -132,11 +131,10 @@ export default function NavBar() {
 						key="menu">
 						<ul className="flex max-w-full flex-col gap-y-4">
 							<li className="mb-2">
-								<Link
-									href="/"
-									className="from-brand-600 to-brand-700 rounded-md bg-linear-to-br px-3 py-1.5 text-sm font-medium tracking-wide text-white"
-									onClick={() => setShowMenu(false)}>
-									Assign Task
+								<Link href="/" onClick={() => setShowMenu(false)}>
+									<Button color="primary" sizes="sm" radius="lg">
+										Assign Task
+									</Button>
 								</Link>
 							</li>
 							{navLinks.map(({ href, label }) => (

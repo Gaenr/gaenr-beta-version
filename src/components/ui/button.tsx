@@ -6,7 +6,8 @@ export default function Button({
 	startContent = null,
 	endContent = null,
 	fullWidth = false,
-	isDisabled = false
+	isDisabled = false,
+	onClick
 }: {
 	children: React.ReactNode
 	color?: 'default' | 'primary'
@@ -16,9 +17,10 @@ export default function Button({
 	endContent?: React.ReactNode
 	fullWidth?: boolean
 	isDisabled?: boolean
+	onClick?: () => void
 }) {
 	const colorClasses = {
-		default: 'bg-white text-zinc-700 hover:text-primary',
+		default: 'bg-white text-zinc-700 hover:text-primary active:text-primary',
 		primary: 'from-brand-600 to-brand-700 bg-linear-to-br text-white'
 	}
 	const sizesClasses = {
@@ -37,6 +39,7 @@ export default function Button({
 	return (
 		<button
 			className={`flex items-center justify-center gap-x-2 font-medium tracking-wide duration-200 ${colorClasses[color]} ${sizesClasses[sizes]} ${radiusClasses[radius]} ${fullWidth ? 'w-full' : 'w-max'}`}
+			onClick={onClick}
 			disabled={isDisabled}>
 			{startContent}
 			{children}
