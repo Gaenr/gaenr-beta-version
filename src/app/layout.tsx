@@ -45,11 +45,12 @@ export default function RootLayout({
 		<html lang="en">
 			<body
 				className={`${dmSans.variable} ${spaceMono.variable} text-foreground bg-background grid min-h-dvh grid-rows-[max-content_1fr] font-sans antialiased`}>
+				<PWARegister />
+
 				<NavBar />
 				{children}
 				<Footer />
 
-				<PWARegister />
 				<HotToast />
 			</body>
 		</html>

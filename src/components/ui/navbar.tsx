@@ -2,12 +2,12 @@
 
 import Image from 'next/image'
 
+import { AnimatePresence, motion } from 'framer-motion'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 
 import { CloseIcon, MenuIcon } from '@/components/icons'
-import { AnimatePresence, motion } from 'framer-motion'
-import { usePathname } from 'next/navigation'
 
 const navLinks = [
 	{
@@ -134,7 +134,7 @@ export default function NavBar() {
 							<li className="mb-2">
 								<Link
 									href="/"
-									className="from-brand-600 to-brand-700 rounded-md bg-linear-to-br px-3 py-1.5 text-sm font-medium tracking-wide text-white capitalize duration-200"
+									className="from-brand-600 to-brand-700 rounded-md bg-linear-to-br px-3 py-1.5 text-sm font-medium tracking-wide text-white"
 									onClick={() => setShowMenu(false)}>
 									Assign Task
 								</Link>

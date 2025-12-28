@@ -11,11 +11,7 @@ export default function InstallPrompt() {
 	const [isVisible, setIsVisible] = useState(false)
 
 	useEffect(() => {
-		const handler = (e: Event) => {
-			e.preventDefault()
-			setDeferredPrompt(e)
-		}
-
+		const handler = (e: Event) => setDeferredPrompt(e)
 		window.addEventListener('beforeinstallprompt', handler)
 
 		return () => window.removeEventListener('beforeinstallprompt', handler)
@@ -34,7 +30,6 @@ export default function InstallPrompt() {
 
 	return (
 		<>
-			<button>hellow world</button>
 			<AnimatePresence>
 				{isVisible && (
 					<motion.div
