@@ -28,21 +28,21 @@ export default function Header() {
 								<li key="popular-1">
 									<Link
 										href="/service/graphics-design"
-										className="rounded-full bg-white/70 px-2 py-1 text-xs font-medium text-nowrap text-zinc-700 duration-200 hover:bg-white active:bg-white">
+										className="active:text-primary rounded-full border border-white bg-white/15 px-2 py-1 text-xs font-medium text-nowrap text-sky-50 shadow-xs duration-200 hover:bg-white hover:text-zinc-700 active:bg-white">
 										Graphics Design
 									</Link>
 								</li>
 								<li key="popular-2">
 									<Link
 										href="/service/wordpress-website"
-										className="rounded-full bg-white/70 px-2 py-1 text-xs font-medium text-nowrap text-zinc-700 duration-200 hover:bg-white active:bg-white">
+										className="active:text-primary rounded-full border border-white bg-white/15 px-2 py-1 text-xs font-medium text-nowrap text-sky-50 shadow-xs duration-200 hover:bg-white hover:text-zinc-700 active:bg-white">
 										WordPress Website
 									</Link>
 								</li>
 								<li key="popular-3">
 									<Link
 										href="/service/video-editing"
-										className="rounded-full bg-white/70 px-2 py-1 text-xs font-medium text-nowrap text-zinc-700 duration-200 hover:bg-white active:bg-white">
+										className="active:text-primary rounded-full border border-white bg-white/15 px-2 py-1 text-xs font-medium text-nowrap text-sky-50 shadow-xs duration-200 hover:bg-white hover:text-zinc-700 active:bg-white">
 										Video Editing
 									</Link>
 								</li>

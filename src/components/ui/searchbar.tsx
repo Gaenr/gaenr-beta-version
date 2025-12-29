@@ -14,7 +14,7 @@ export default function SearchBar() {
 		params.set('search', search)
 
 		if (!search) return
-		router.replace(`/services?${params.toString()}`, {
+		router.replace(`/service?${params.toString()}`, {
 			scroll: false
 		})
 	}

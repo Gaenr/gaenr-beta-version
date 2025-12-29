@@ -35,7 +35,7 @@ export default function Page() {
 
 						<Link
 							href="/about"
-							className="text-primary flex items-center gap-x-1 self-start border-b-2 border-current leading-0 font-medium duration-200">
+							className="text-primary flex items-center gap-x-1 self-start border-b-2 border-current leading-0 font-medium duration-200 hover:border-transparent">
 							Know more <ArrowIcon className="size-5" />
 						</Link>
 					</article>
