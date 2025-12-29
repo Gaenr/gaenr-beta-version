@@ -31,8 +31,11 @@ export const metadata: Metadata = {
 	keywords: [''],
 	appleWebApp: {
 		capable: true,
-		title: '',
+		title: 'Gaenr',
 		statusBarStyle: 'black-translucent'
+	},
+	icons: {
+		apple: '/apple-touch-icon.png'
 	}
 }
 
