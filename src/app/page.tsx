@@ -1,6 +1,7 @@
 import ServiceBox from '@/components/features/service-box'
 import { ArrowIcon } from '@/components/icons'
 import Header from '@/components/ui/header'
+import MiniLink from '@/components/ui/mini-link'
 import { SERVICE_NAMES } from '@/utils/constants'
 import Link from 'next/dist/client/link'
 
@@ -49,7 +50,9 @@ export default function Page() {
 				{/* Section 2 */}
 				<section className="lg:max-w-8xl mx-auto grid w-full max-w-3xl grid-cols-1 items-center gap-y-16 px-6 lg:grid-cols-2 lg:gap-x-24">
 					{/* Section 2 left */}
-					<div>content 1</div>
+					<div>
+						<p className="font-mono text-sm font-medium">Available Services</p>
+					</div>
 
 					{/* Section 2 right */}
 					<article className="lg:gapy-y-12 flex flex-col gap-y-5 sm:gap-y-8">
@@ -80,28 +83,26 @@ export default function Page() {
 							</p>
 						</div>
 
-						<Link
-							href="/feedback"
-							className="text-primary flex items-center gap-x-1 self-start border-b-2 border-current leading-0 font-medium duration-200 hover:border-transparent">
-							Share your feedback <ArrowIcon className="size-5" />
-						</Link>
+						<MiniLink href="/feedback">Share your feedback</MiniLink>
 					</article>
 				</section>
 
 				{/* Section 3 */}
-				<section className="lg:max-w-8xl mx-auto w-full space-y-12 px-6">
-					<h2 className="flex flex-col items-center justify-center text-[clamp(1rem,6vw,2rem)] font-bold text-zinc-700 sm:flex-row sm:gap-x-2.5 lg:text-3xl">
+				<section className="lg:max-w-8xl mx-auto flex w-full flex-col items-center gap-y-12 px-6 lg:items-start">
+					<h2 className="flex flex-col items-center text-[clamp(1rem,7vw,1.8rem)] font-semibold text-zinc-700 sm:flex-row sm:gap-x-2.5 sm:text-3xl">
 						<p>Services that</p>
 						<p className="text-brand-800">move you forward</p>
 					</h2>
 
-					<div className="grid grid-cols-[repeat(auto-fill,minmax(9rem,1fr))] justify-center gap-x-5 gap-y-9 min-[500px]:grid-cols-[repeat(auto-fill,minmax(12rem,1fr))]">
+					<div className="grid grid-cols-[repeat(auto-fill,minmax(9rem,1fr))] justify-center gap-x-5 gap-y-9 self-stretch min-[500px]:grid-cols-[repeat(auto-fill,minmax(12rem,1fr))]">
 						{SERVICE_NAMES.map((serviceName, id) => (
 							<ServiceBox id={id} key={serviceName}>
 								{serviceName}
 							</ServiceBox>
 						))}
 					</div>
+
+					<MiniLink href="/services">Let's explore</MiniLink>
 				</section>
 			</main>
 		</div>
