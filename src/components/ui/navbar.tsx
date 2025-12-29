@@ -39,7 +39,7 @@ export default function NavBar() {
 
 	return (
 		<>
-			<nav className="sticky inset-x-0 top-0 z-50 flex h-auto w-full flex-wrap items-center justify-center border-b border-zinc-100 bg-white/70 backdrop-blur-lg backdrop-saturate-150">
+			<nav className="sticky inset-x-0 top-0 z-50 flex h-auto w-full flex-wrap items-center justify-center border-b border-slate-100 bg-white/70 backdrop-blur-lg backdrop-saturate-150">
 				<div className="max-w-8xl flex h-(--navbar-height) w-full flex-nowrap items-center justify-between px-6">
 					<ul>
 						<li>

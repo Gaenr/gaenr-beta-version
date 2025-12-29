@@ -85,7 +85,7 @@ export const services: Service[] = [
 	},
 	{
 		serviceId: 4,
-		name: 'WordPress Development',
+		name: 'WordPress Website',
 		description:
 			'Professional WordPress development services for custom themes and plugins.',
 		minPrice: 1000,
@@ -118,6 +118,33 @@ export const services: Service[] = [
 		minPrice: 1000,
 		maxPrice: 5000,
 		imageUrl: '/images/services/video-editing.jpg',
+		minDuration: 3,
+		maxDuration: 10,
+		experts: 5,
+		ratings: 4.8,
+		completedProjects: 150,
+		totalReviews: 45,
+		reviews: [
+			{
+				reviewer: 'Alice Johnson',
+				rating: 5,
+				comment: 'Excellent content that boosted our website traffic!'
+			},
+			{
+				reviewer: 'Bob Smith',
+				rating: 4.2,
+				comment: 'Good quality writing, delivered on time.'
+			}
+		]
+	},
+	{
+		serviceId: 6,
+		name: 'UX & UI Design',
+		description:
+			'User experience and interface design services for engaging digital products.',
+		minPrice: 1000,
+		maxPrice: 5000,
+		imageUrl: '/images/services/ux-ui-design.jpg',
 		minDuration: 3,
 		maxDuration: 10,
 		experts: 5,

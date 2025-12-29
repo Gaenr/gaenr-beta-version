@@ -1,6 +1,8 @@
+import { ServiceName } from '.'
+
 export interface Service {
 	readonly serviceId: number
-	name: string
+	name: ServiceName
 	description: string
 	minPrice: number
 	maxPrice: number

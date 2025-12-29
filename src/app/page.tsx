@@ -1,5 +1,7 @@
+import ServiceBox from '@/components/features/service-box'
 import { ArrowIcon } from '@/components/icons'
 import Header from '@/components/ui/header'
+import { SERVICE_NAMES } from '@/utils/constants'
 import Link from 'next/dist/client/link'
 
 export default function Page() {
@@ -13,10 +15,10 @@ export default function Page() {
 					{/* Section 1 left */}
 					<article className="lg:gapy-y-12 flex flex-col gap-y-5 sm:gap-y-8">
 						<h2 className="self-stretch text-center text-[clamp(1rem,6vw,2rem)] font-bold text-zinc-700 lg:text-left lg:text-3xl">
-							More Than a Platform
+							More than a platform
 							<span className="hidden md:inline lg:hidden xl:inline">,</span>
 							<span className="text-brand-800 block md:ml-2 md:inline lg:mt-2 lg:ml-0 lg:block xl:ml-2 xl:inline">
-								A Pathway
+								A pathway
 							</span>
 						</h2>
 						<div className="space-y-1 sm:space-y-3 lg:space-y-5">
@@ -44,6 +46,7 @@ export default function Page() {
 					<div>content 2</div>
 				</section>
 
+				{/* Section 2 */}
 				<section className="lg:max-w-8xl mx-auto grid w-full max-w-3xl grid-cols-1 items-center gap-y-16 px-6 lg:grid-cols-2 lg:gap-x-24">
 					{/* Section 2 left */}
 					<div>content 1</div>
@@ -83,6 +86,22 @@ export default function Page() {
 							Share your feedback <ArrowIcon className="size-5" />
 						</Link>
 					</article>
+				</section>
+
+				{/* Section 3 */}
+				<section className="lg:max-w-8xl mx-auto w-full space-y-12 px-6">
+					<h2 className="flex flex-col items-center justify-center text-[clamp(1rem,6vw,2rem)] font-bold text-zinc-700 sm:flex-row sm:gap-x-2.5 lg:text-3xl">
+						<p>Services that</p>
+						<p className="text-brand-800">move you forward</p>
+					</h2>
+
+					<div className="grid grid-cols-[repeat(auto-fill,minmax(9rem,1fr))] justify-center gap-x-5 gap-y-9 min-[500px]:grid-cols-[repeat(auto-fill,minmax(12rem,1fr))]">
+						{SERVICE_NAMES.map((serviceName, id) => (
+							<ServiceBox id={id} key={serviceName}>
+								{serviceName}
+							</ServiceBox>
+						))}
+					</div>
 				</section>
 			</main>
 		</div>
