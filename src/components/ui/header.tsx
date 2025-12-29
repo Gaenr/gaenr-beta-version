@@ -28,21 +28,21 @@ export default function Header() {
 								<li key="popular-1">
 									<Link
 										href="/service/graphics-design"
-										className="rounded-full bg-white/70 px-2 py-1 text-xs font-medium text-zinc-700 duration-200 hover:bg-white active:bg-white">
+										className="rounded-full bg-white/70 px-2 py-1 text-xs font-medium text-nowrap text-zinc-700 duration-200 hover:bg-white active:bg-white">
 										Graphics Design
 									</Link>
 								</li>
 								<li key="popular-2">
 									<Link
 										href="/service/wordpress-website"
-										className="rounded-full bg-white/70 px-2 py-1 text-xs font-medium text-zinc-700 duration-200 hover:bg-white active:bg-white">
+										className="rounded-full bg-white/70 px-2 py-1 text-xs font-medium text-nowrap text-zinc-700 duration-200 hover:bg-white active:bg-white">
 										WordPress Website
 									</Link>
 								</li>
 								<li key="popular-3">
 									<Link
 										href="/service/video-editing"
-										className="rounded-full bg-white/70 px-2 py-1 text-xs font-medium text-zinc-700 duration-200 hover:bg-white active:bg-white">
+										className="rounded-full bg-white/70 px-2 py-1 text-xs font-medium text-nowrap text-zinc-700 duration-200 hover:bg-white active:bg-white">
 										Video Editing
 									</Link>
 								</li>
@@ -68,6 +68,7 @@ export default function Header() {
 				</section>
 			</div>
 
+			{/* Semi-circle */}
 			<div className="absolute bottom-1/8 left-0 hidden h-32 w-16 rounded-tr-full rounded-br-full bg-blue-200/30 shadow-md saturate-150 2xl:block"></div>
 		</header>
 	)

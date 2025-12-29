@@ -38,7 +38,7 @@ export default function Button({
 
 	return (
 		<button
-			className={`flex items-center justify-center gap-x-2 font-medium tracking-wide duration-200 ${colorClasses[color]} ${sizesClasses[sizes]} ${radiusClasses[radius]} ${fullWidth ? 'w-full' : 'w-max'}`}
+			className={`flex items-center justify-center gap-x-2 font-medium tracking-wide text-nowrap duration-200 ${colorClasses[color]} ${sizesClasses[sizes]} ${radiusClasses[radius]} ${fullWidth ? 'w-full' : 'w-max'}`}
 			onClick={onClick}
 			disabled={isDisabled}>
 			{startContent}
