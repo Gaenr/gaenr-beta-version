@@ -14,15 +14,12 @@ export default function Page() {
 				{/* Section 1 */}
 				<section className="lg:max-w-8xl mx-auto grid w-full max-w-3xl grid-cols-1 items-center gap-y-16 px-6 lg:grid-cols-2 lg:gap-x-24">
 					{/* Section 1 left */}
-					<article className="lg:gapy-y-12 flex flex-col gap-y-5 sm:gap-y-8">
-						<h2 className="self-stretch text-center text-[clamp(1rem,6vw,2rem)] font-bold text-zinc-700 lg:text-left lg:text-3xl">
-							More than a platform
-							<span className="hidden md:inline lg:hidden xl:inline">,</span>
-							<span className="text-brand-800 block md:ml-2 md:inline lg:mt-2 lg:ml-0 lg:block xl:ml-2 xl:inline">
-								A pathway
-							</span>
+					<article className="lg:gapy-y-12 flex flex-col items-start gap-y-8">
+						<h2 className="flex flex-col items-center self-stretch text-[clamp(1rem,7vw,1.8rem)] font-semibold text-zinc-700 sm:items-start sm:gap-y-2 sm:text-3xl">
+							<p>More than a platform</p>
+							<p className="text-brand-800">A pathway</p>
 						</h2>
-						<div className="space-y-1 sm:space-y-3 lg:space-y-5">
+						<div className="space-y-3">
 							<p>
 								Gaenr is a straightforward freelancing platform built for
 								Bangladesh's fastest-growing problem: skilled people who need
@@ -55,15 +52,12 @@ export default function Page() {
 					</div>
 
 					{/* Section 2 right */}
-					<article className="lg:gapy-y-12 flex flex-col gap-y-5 sm:gap-y-8">
-						<h2 className="flex flex-col gap-y-1 self-stretch text-center text-[clamp(1rem,6vw,2rem)] font-bold text-zinc-700 lg:text-left lg:text-3xl">
+					<article className="lg:gapy-y-12 flex flex-col items-start gap-y-8">
+						<h2 className="flex flex-col items-center self-stretch text-[clamp(1rem,7vw,1.8rem)] font-semibold text-zinc-700 sm:items-start sm:gap-y-2 sm:text-3xl">
 							<p>We're still building</p>
-							<p className="">
-								But you can
-								<span className="text-brand-800 ml-2">start today</span>
-							</p>
+							<p className="text-brand-800">But you can start today</p>
 						</h2>
-						<div className="space-y-1 sm:space-y-3 lg:space-y-5">
+						<div className="space-y-3">
 							<p>
 								This is our beta version, and we're being honest about it. We're
 								not offering full automation yet, but that's actually our
