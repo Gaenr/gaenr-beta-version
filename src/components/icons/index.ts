@@ -1,4 +1,5 @@
 export { ArrowIcon } from './arrow'
+export { BadgeCheckIcon } from './badge-check'
 export { CloseIcon } from './close'
 export { InstallIcon } from './install'
 export { MenuIcon } from './menu'

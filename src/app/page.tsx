@@ -1,5 +1,5 @@
 import ServiceBox from '@/components/features/service-box'
-import { ArrowIcon } from '@/components/icons'
+import { ArrowIcon, BadgeCheckIcon } from '@/components/icons'
 import Header from '@/components/ui/header'
 import MiniLink from '@/components/ui/mini-link'
 import { SERVICE_NAMES } from '@/utils/constants'
@@ -41,15 +41,13 @@ export default function Page() {
 					</article>
 
 					{/* Section 1 right */}
-					<div>content 2</div>
+					<div>Content right</div>
 				</section>
 
 				{/* Section 2 */}
 				<section className="lg:max-w-8xl mx-auto grid w-full max-w-3xl grid-cols-1 items-center gap-y-16 px-6 lg:grid-cols-2 lg:gap-x-24">
 					{/* Section 2 left */}
-					<div>
-						<p className="font-mono text-sm font-medium">Available Services</p>
-					</div>
+					<div>content left</div>
 
 					{/* Section 2 right */}
 					<article className="lg:gapy-y-12 flex flex-col items-start gap-y-8">
@@ -98,6 +96,64 @@ export default function Page() {
 
 					<MiniLink href="/services">Let's explore</MiniLink>
 				</section>
+
+				{/* Section 4 */}
+				<div className="bg[url('/xyz.svg')] bgcover bgno-repeat bg-blue-400/10 py-16 md:py-24">
+					<section className="lg:max-w-8xl mx-auto grid w-full max-w-3xl grid-cols-1 items-center gap-y-16 px-6 lg:grid-cols-2 lg:gap-x-24">
+						<div className="bg-white">
+							An Ecosystem Designed for Your Growth
+						</div>
+
+						{/* Section 4 right */}
+						<div className="space-y-10">
+							<p className="text-brand-800 text-lg font-semibold">
+								For clients
+							</p>
+
+							<ul className="grid grid-cols-1 items-start gap-y-7 px-4 md:grid-cols-2 md:gap-10 lg:grid-cols-1 lg:gap-y-7 2xl:grid-cols-2 2xl:gap-10">
+								<li className="grid grid-cols-[auto_1fr] items-center gap-x-6 gap-y-0.5">
+									<div className="bg-brand-600 row-start-1 row-end-3 flex size-9 shrink-0 flex-nowrap items-center justify-center rounded-full border-4 border-blue-200">
+										<BadgeCheckIcon className="size-4.5 text-white" />
+									</div>
+									<p className="font-medium">0% Platform Fee</p>
+									<p className="text-sm font-medium text-zinc-500">
+										Pay only for work done
+									</p>
+								</li>
+
+								<li className="grid grid-cols-[auto_1fr] items-center gap-x-6 gap-y-0.5">
+									<div className="bg-brand-600 row-start-1 row-end-3 flex size-9 items-center justify-center rounded-full border-4 border-blue-200">
+										<BadgeCheckIcon className="size-4 text-white" />
+									</div>
+									<p className="font-medium">Hassle-free Process</p>
+									<p className="text-sm font-medium text-zinc-500">
+										No platform chaos; we manage it for you
+									</p>
+								</li>
+
+								<li className="grid grid-cols-[auto_1fr] items-center gap-x-6 gap-y-0.5">
+									<div className="bg-brand-600 row-start-1 row-end-3 flex size-9 items-center justify-center rounded-full border-4 border-blue-200">
+										<BadgeCheckIcon className="size-4 text-white" />
+									</div>
+									<p className="font-medium">Secure Payment Handling</p>
+									<p className="text-sm font-medium text-zinc-500">
+										Every transaction is protected and transparent
+									</p>
+								</li>
+
+								<li className="grid grid-cols-[auto_1fr] items-center gap-x-6 gap-y-0.5">
+									<div className="bg-brand-600 row-start-1 row-end-3 flex size-9 items-center justify-center rounded-full border-4 border-blue-200">
+										<BadgeCheckIcon className="size-4 text-white" />
+									</div>
+									<p className="font-medium">Verified Experts</p>
+									<p className="text-sm font-medium text-zinc-500">
+										Handpicked talent ready for real work
+									</p>
+								</li>
+							</ul>
+						</div>
+					</section>
+				</div>
 			</main>
 		</div>
 	)
