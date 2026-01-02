@@ -98,11 +98,9 @@ export default function Page() {
 				</section>
 
 				{/* Section 4 */}
-				<div className="bg[url('/xyz.svg')] bgcover bgno-repeat bg-blue-400/10 py-16 md:py-24">
+				<div className="space-y-16 bg-[url('/xyz.svg')] bg-cover bg-no-repeat py-16 md:py-24">
 					<section className="lg:max-w-8xl mx-auto grid w-full max-w-3xl grid-cols-1 items-center gap-y-16 px-6 lg:grid-cols-2 lg:gap-x-24">
-						<div className="bg-white">
-							An Ecosystem Designed for Your Growth
-						</div>
+						<div className="">left content</div>
 
 						{/* Section 4 right */}
 						<div className="space-y-10">
