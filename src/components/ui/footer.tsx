@@ -13,7 +13,7 @@ import {
 import { SERVICE_NAMES } from '@/utils/constants'
 
 export default function Footer() {
-	const linkClasses = `text-sm text-zinc-500 capitalize duration-200 hover:text-zinc-800 active:text-zinc-800`
+	const linkClasses = `text-sm text-zinc-500 duration-200 hover:text-zinc-800 active:text-zinc-800`
 
 	return (
 		<div className="w-full border-t border-slate-100 py-10 lg:py-16">

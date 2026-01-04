@@ -5,7 +5,7 @@ import SearchBar from '@/components/ui/searchbar'
 
 export default function Header() {
 	return (
-		<header className="relative h-auto min-h-[calc(100dvh-var(--navbar-height))] w-full bg-[url('/svgs/hero.svg')] bg-cover bg-no-repeat px-6 py-8 lg:flex lg:items-center lg:justify-center">
+		<header className="relative flex h-auto min-h-[calc(100dvh-var(--navbar-height))] w-full items-center justify-center bg-[url('/svgs/hero.svg')] bg-cover bg-no-repeat px-6 py-8">
 			<div className="lg:max-w-8xl mx-auto grid w-full max-w-3xl grid-cols-1 items-center gap-y-16 lg:grid-cols-2 lg:gap-x-24">
 				<section className="flex flex-col items-center gap-y-8 sm:gap-y-12">
 					<article className="flex flex-col items-center gap-y-4 lg:items-start lg:gap-y-8">
