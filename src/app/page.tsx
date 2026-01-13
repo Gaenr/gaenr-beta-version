@@ -1,13 +1,14 @@
-import Link from 'next/dist/client/link'
 import Image from 'next/image'
 
 import ServiceBox from '@/components/features/service-box'
-import { ArrowIcon, BadgeCheckIcon, MessageIcon } from '@/components/icons'
+import { BadgeCheckIcon, MessageIcon } from '@/components/icons'
 import Button from '@/components/ui/button'
 import Header from '@/components/ui/header'
 import MiniLink from '@/components/ui/mini-link'
 import { SERVICE_NAMES } from '@/utils/constants'
 
+import PaymentBox from '@/components/features/payment-box'
+import { PAYMENT_PROCESS_STEPS } from '@/data/payment-process-short'
 import iPhoneMockup from '../../public/svgs/iPhone-mockup.svg'
 
 export default function Page() {
@@ -38,11 +39,7 @@ export default function Page() {
 							</p>
 						</div>
 
-						<Link
-							href="/about"
-							className="text-primary flex items-center gap-x-1 self-start border-b-2 border-current leading-0 font-medium duration-200 hover:border-transparent">
-							Know more <ArrowIcon className="size-5" />
-						</Link>
+						<MiniLink href="/about">Know more</MiniLink>
 					</article>
 
 					{/* Section 1 right */}
@@ -91,13 +88,13 @@ export default function Page() {
 						<p className="text-brand-800">move you forward</p>
 					</h2>
 
-					<div className="grid grid-cols-[repeat(auto-fill,minmax(9rem,1fr))] justify-center gap-x-5 gap-y-9 self-stretch min-[500px]:grid-cols-[repeat(auto-fill,minmax(12rem,1fr))]">
+					<ul className="grid grid-cols-[repeat(auto-fill,minmax(9rem,1fr))] justify-center gap-x-5 gap-y-9 self-stretch min-[500px]:grid-cols-[repeat(auto-fill,minmax(12rem,1fr))]">
 						{SERVICE_NAMES.map((serviceName, id) => (
 							<ServiceBox id={id} key={serviceName}>
 								{serviceName}
 							</ServiceBox>
 						))}
-					</div>
+					</ul>
 
 					<MiniLink href="/services">Let's explore</MiniLink>
 				</section>
@@ -159,10 +156,34 @@ export default function Page() {
 				</div>
 
 				{/* Section 5 */}
-				<section></section>
+				{/* <section></section> */}
 
 				{/* Section 6 */}
-				<section></section>
+				<section className="lg:max-w-8xl mx-auto grid w-full max-w-3xl grid-cols-1 items-center gap-y-16 px-6 lg:grid-cols-2 lg:gap-x-24">
+					<div className="col-span-full">
+						<h2 className="flex flex-col items-center text-[clamp(1rem,7vw,1.8rem)] font-semibold text-zinc-700 sm:flex-row sm:gap-x-2.5 sm:text-3xl">
+							<p className="text-brand-800">Fast simple secure</p>
+							<p>payment process</p>
+						</h2>
+					</div>
+
+					<div className="lg:gapy-y-12 flex flex-col items-start gap-y-8">
+						<div className="h-50 w-full rounded-3xl border border-slate-200"></div>
+
+						<MiniLink href="/services">Learn more</MiniLink>
+					</div>
+
+					<ul className="grid grid-cols-1 gap-y-8">
+						{PAYMENT_PROCESS_STEPS.map(({ title, description }, id) => (
+							<PaymentBox
+								title={title}
+								description={description}
+								id={id}
+								key={title}
+							/>
+						))}
+					</ul>
+				</section>
 
 				{/* Section 7 */}
 				<div className="sm:px-6">
@@ -220,7 +241,7 @@ export default function Page() {
 
 								<div className="absolute top-1/4 left-1/2 -translate-x-1/2">
 									<div className="rounded-2xl-plus grid grid-cols-[auto_9rem_auto] items-center gap-x-3 border border-slate-200/30 bg-white/70 p-2.5 shadow-sm saturate-150 backdrop-blur-xl md:grid-cols-[auto_8rem_auto]">
-										<div className="flex size-11 items-center justify-center rounded-xl bg-white bg-linear-to-br">
+										<div className="flex size-11 items-center justify-center rounded-xl bg-white">
 											<MessageIcon className="text-primary size-7" />
 										</div>
 
