@@ -21,7 +21,7 @@ export default function Button({
 }) {
 	const colorClasses = {
 		default: 'bg-white text-zinc-700 hover:text-primary active:text-primary',
-		primary: 'from-brand-600 to-brand-700 bg-linear-to-br text-white'
+		primary: 'from-primary-light to-primary bg-linear-to-br text-white'
 	}
 	const sizesClasses = {
 		sm: 'h-8 text-sm px-3',

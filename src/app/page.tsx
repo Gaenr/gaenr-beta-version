@@ -120,7 +120,7 @@ export default function Page() {
 									<li
 										className="group grid grid-cols-[auto_1fr] items-center gap-x-6 gap-y-0.5"
 										key={title}>
-										<div className="bg-brand-600 row-start-1 row-end-3 flex size-7 shrink-0 flex-nowrap items-center justify-center rounded-full ring-4 ring-blue-200 duration-200 group-hover:ring-0">
+										<div className="bg-primary-light row-start-1 row-end-3 flex size-7 shrink-0 flex-nowrap items-center justify-center rounded-full ring-4 ring-blue-200 duration-200 group-hover:ring-0">
 											<BadgeCheckIcon className="size-4 text-white" />
 										</div>
 										<p className="font-medium">{title}</p>
