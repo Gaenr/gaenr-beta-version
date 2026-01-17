@@ -80,10 +80,10 @@ export default function NavBar() {
 					</ul>
 					<ul className="hidden items-center gap-x-8 lg:flex">
 						{navLinks.map(({ href, label }) => (
-							<li className="relative overflow-x-hidden" key={href}>
+							<li className="relative h-6.5 overflow-x-hidden" key={href}>
 								<Link
 									href={href}
-									className={`${pathname === href ? 'text-primary' : 'hover:text-primary text-zinc-700'} relative font-medium duration-200`}>
+									className={`${pathname === href ? 'text-primary' : 'hover:text-primary text-zinc-700'} font-medium duration-200`}>
 									{label}
 								</Link>
 								<AnimatePresence mode="wait">
@@ -101,7 +101,7 @@ export default function NavBar() {
 											transition={{
 												duration: 0.2
 											}}
-											className="bg-primary absolute bottom-0 h-0.5 w-full rounded-full"
+											className="bg-primary absolute bottom-0 left-1/2 h-0.75 w-[95%] -translate-x-1/2 rounded-full"
 										/>
 									)}
 								</AnimatePresence>

@@ -25,7 +25,7 @@ export default function Button({
 	}
 	const sizesClasses = {
 		sm: 'h-8 text-sm px-3',
-		md: 'h-10 text-sm px-4',
+		md: 'h-10 text-sm px-6',
 		lg: 'h-12 text-base px-6'
 	}
 	const radiusClasses = {

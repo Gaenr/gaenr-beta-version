@@ -70,7 +70,7 @@ export default function Footer() {
 						'Payment Procedure',
 						'Hiring Process',
 						'Joining Process',
-						'contact'
+						'Contact'
 					].map((item) => (
 						<li key={item}>
 							<Link

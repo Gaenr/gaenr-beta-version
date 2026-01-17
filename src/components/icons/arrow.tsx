@@ -8,19 +8,17 @@ export const ArrowIcon = (props: React.SVGProps<SVGSVGElement>) => {
 			viewBox="0 0 24 24"
 			height="1em"
 			{...props}>
-			<g fill="none">
-				<path
-					stroke="currentColor"
-					strokeLinecap="round"
-					strokeLinejoin="round"
-					strokeWidth="2"
-					d="M17 12H3"
-				/>
-				<path
-					fill="currentColor"
-					d="m21.715 11.797l-5.45-3.893a.8.8 0 0 0-1.265.65v6.891a.8.8 0 0 0 1.265.651l5.45-3.893a.25.25 0 0 0 0-.406"
-				/>
-			</g>
+			<path
+				stroke="currentColor"
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeWidth="2"
+				d="M17 12H3"
+			/>
+			<path
+				fill="currentColor"
+				d="m21.715 11.797l-5.45-3.893a.8.8 0 0 0-1.265.65v6.891a.8.8 0 0 0 1.265.651l5.45-3.893a.25.25 0 0 0 0-.406"
+			/>
 		</svg>
 	)
 }

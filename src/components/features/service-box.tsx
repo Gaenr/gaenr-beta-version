@@ -25,7 +25,7 @@ export default function ServiceBox({
 	const Icon = serviceIcons[id]
 
 	return (
-		<li className="space-y-4 rounded-3xl border border-slate-200 bg-white p-6">
+		<li className="space-y-5 rounded-3xl border border-slate-200 bg-white p-6">
 			<div className="from-brand-600 via-brand-700 to-brand-800 flex size-12 items-center justify-center rounded-xl bg-linear-to-br">
 				<Icon className="size-7 text-white" />
 			</div>
