@@ -127,7 +127,7 @@ export default function NavBar() {
 							stiffness: 300,
 							mass: 0.5
 						}}
-						className="fixed inset-x-0 top-(--navbar-height) z-40 flex h-[calc(100vh-var(--navbar-height))] origin-top flex-col border-b border-zinc-100 bg-white/90 p-8 backdrop-blur-lg backdrop-saturate-150 lg:hidden"
+						className="fixed inset-x-0 top-(--navbar-height) z-40 flex h-[calc(100vh-var(--navbar-height))] origin-top flex-col border-b border-zinc-100 bg-white p-8 lg:hidden"
 						key="menu">
 						<ul className="flex max-w-full flex-col gap-y-4">
 							<li className="mb-2">

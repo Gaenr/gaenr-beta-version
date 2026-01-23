@@ -1,19 +1,19 @@
 export const CheckSquareIcon = (props: React.SVGProps<SVGSVGElement>) => {
 	return (
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			aria-hidden="true"
-			fill="currentColor"
-			width="1em"
-			viewBox="0 0 24 24"
-			height="1em"
-			{...props}>
-			<g transform="scale(0.80) translate(2.5 2.5)">
+		<div className="scale-85">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				aria-hidden="true"
+				fill="currentColor"
+				width="1em"
+				viewBox="0 0 24 24"
+				height="1em"
+				{...props}>
 				<path
 					fill="currentColor"
 					d="M15.25 2h-6.5A6.76 6.76 0 0 0 2 8.75v6.5A6.76 6.76 0 0 0 8.75 22h6.5A6.76 6.76 0 0 0 22 15.25v-6.5A6.76 6.76 0 0 0 15.25 2m2.06 8.16l-5.22 5.22a2 2 0 0 1-1.41.59a2 2 0 0 1-.76-.15a2 2 0 0 1-.64-.44l-2.59-2.59a1 1 0 0 1 1.41-1.41l2.59 2.59l5.21-5.23a1.002 1.002 0 0 1 1.41 1.42"
 				/>
-			</g>
-		</svg>
+			</svg>
+		</div>
 	)
 }

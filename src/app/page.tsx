@@ -1,21 +1,14 @@
-import Image from 'next/image'
-
 import PaymentBox from '@/components/features/payment-box'
 import ServiceBox from '@/components/features/service-box'
-import {
-	BadgeCheckIcon,
-	MessageIcon,
-	VideoEditingIcon
-} from '@/components/icons'
+import { BadgeCheckIcon, MessageIcon } from '@/components/icons'
 import Button from '@/components/ui/button'
 import Header from '@/components/ui/header'
 import MiniLink from '@/components/ui/mini-link'
-
+import Testimonials from '@/components/ui/testimonials'
 import { CLIENT_BENEFITS } from '@/data/clients-benefit'
 import { PAYMENT_PROCESS_STEPS } from '@/data/payment-process-steps'
-
 import { SERVICE_NAMES } from '@/utils/constants'
-
+import Image from 'next/image'
 import iPhoneMockup from '../../public/svgs/iPhone-mockup.svg'
 
 export default function Page() {
@@ -134,7 +127,7 @@ export default function Page() {
 					</section>
 				</div>
 
-				<section className="lg:max-w-8xl mx-auto grid w-full max-w-3xl grid-cols-1 items-center gap-y-16 px-6 lg:grid-cols-2 lg:items-start lg:gap-x-24">
+				<section className="mx-auto w-full max-w-3xl space-y-16 px-6 lg:max-w-7xl">
 					<div className="col-span-full">
 						<h2 className="flex flex-col items-center text-[clamp(1rem,7vw,1.8rem)] font-semibold text-zinc-700 sm:flex-row sm:gap-x-2.5 sm:text-3xl">
 							<p className="text-primary-dark">Fast simple secure</p>
@@ -142,62 +135,7 @@ export default function Page() {
 						</h2>
 					</div>
 
-					<div className="lg:gapy-y-12 -flex relative hidden w-full flex-col items-start gap-y-8">
-						<div className="w-full rounded-3xl border border-blue-100/30 bg-blue-100/30 p-5">
-							<p className="mb-2 text-xs font-semibold text-zinc-500">
-								Payment method
-							</p>
-
-							<ul className="grid grid-cols-3 gap-x-1 overflow-x-auto rounded-lg bg-blue-100/30 p-1">
-								<li className="flex min-w-50 items-center justify-center gap-x-3 rounded-lg border-blue-100 py-3 font-medium text-zinc-400">
-									<Image
-										src="/svgs/bkash.svg"
-										alt="Bkash Icon"
-										width={32}
-										height={32}
-									/>
-									<p className="font-medium text-zinc-500">Bkash</p>
-								</li>
-
-								<li className="flex items-center justify-center gap-x-3 bg-white px-5 py-2.5 font-medium text-zinc-400">
-									<Image
-										src="/svgs/nagad.svg"
-										alt="Nagad Icon"
-										width={24}
-										height={24}
-									/>
-									<p className="text-sm font-medium text-zinc-500">Nagad</p>
-								</li>
-
-								<li className="flex items-center justify-center gap-x-3 rounded-r-full bg-white px-5 py-2.5 font-medium text-zinc-400">
-									<Image
-										src="/svgs/upai.svg"
-										alt="Upai Icon"
-										width={24}
-										height={24}
-									/>
-									<p className="text-sm font-medium text-zinc-500">Upai</p>
-								</li>
-							</ul>
-
-							<div className="my-5">
-								<p className="mb-4 flex w-full items-center gap-x-2 text-xs font-medium">
-									<VideoEditingIcon className="text-primary size-4" />
-									Graphics Design
-									<span className="ml-auto">x1</span>
-								</p>
-								<p className="text-lg font-medium">23,000 BDT</p>
-								<p className="text-sm text-zinc-500">
-									Securely pay with your preferred method
-								</p>
-							</div>
-
-							<Button>Pay Now</Button>
-						</div>
-					</div>
-					<div></div>
-
-					<ul className="grid grid-cols-1 gap-y-8">
+					<ul className="grid grid-cols-1 gap-y-8 sm:grid-cols-3 sm:gap-10">
 						{PAYMENT_PROCESS_STEPS.map(({ title, description }, id) => (
 							<PaymentBox
 								title={title}
@@ -208,6 +146,10 @@ export default function Page() {
 						))}
 					</ul>
 				</section>
+
+				<div className="flex h-120 w-full items-center justify-center bg-blue-100/30 px-6 md:h-140">
+					<Testimonials />
+				</div>
 
 				<div className="sm:px-6">
 					<section className="bg-primary relative mx-auto flex w-full max-w-6xl flex-col gap-y-8 overflow-hidden p-10 sm:rounded-3xl">

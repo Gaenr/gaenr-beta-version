@@ -26,7 +26,7 @@ export default function PaymentBox({
 	const Icon = processIcons[id]
 
 	return (
-		<li className="flex w-full max-w-sm items-center gap-x-6">
+		<li className="flex w-full max-w-sm items-center gap-x-6 sm:flex-col sm:items-start sm:gap-y-4">
 			<Icon className="text-primary size-7 shrink-0" />
 			<div className="flex flex-col gap-y-1">
 				<p className="font-medium">{title}</p>
