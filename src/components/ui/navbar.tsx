@@ -132,7 +132,7 @@ export default function NavBar() {
 						<ul className="flex max-w-full flex-col gap-y-4">
 							<li className="mb-2">
 								<Link href="/" onClick={() => setShowMenu(false)}>
-									<Button color="primary" sizes="sm" radius="lg">
+									<Button color="primary" sizes="md">
 										Assign Task
 									</Button>
 								</Link>
@@ -141,7 +141,7 @@ export default function NavBar() {
 								<li key={href}>
 									<Link
 										href={href}
-										className={`font-medium ${pathname === href ? 'text-primary border-primary border-b-2' : 'text-zinc-700'} pb-px`}
+										className={`font-medium ${pathname === href ? 'text-primary border-primary border-b-2' : 'text-zinc-700'} pb-px text-lg`}
 										onClick={() => setShowMenu(false)}>
 										{label}
 									</Link>

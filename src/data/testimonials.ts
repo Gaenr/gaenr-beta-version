@@ -1,7 +1,7 @@
 export const TESTIMONIALS = [
 	{
 		id: 0,
-		image: '/home-reviews/1.jpg',
+		image: '/testimonial-images/1.jpg',
 		name: 'Darren Dunlap',
 		title: 'CEO & Founder at Flex.co',
 		quote:
@@ -9,7 +9,7 @@ export const TESTIMONIALS = [
 	},
 	{
 		id: 1,
-		image: '/home-reviews/2.jpg',
+		image: '/testimonial-images/2.jpg',
 		name: 'Elara Moonfall',
 		title: 'CEO, Luminary Tech Solutions',
 		quote:
@@ -17,7 +17,7 @@ export const TESTIMONIALS = [
 	},
 	{
 		id: 2,
-		image: '/home-reviews/3.jpg',
+		image: '/testimonial-images/3.jpg',
 		name: 'Ronan Ashcroft',
 		title: 'Founder & CEO, Ashcroft Dynamics',
 		quote:

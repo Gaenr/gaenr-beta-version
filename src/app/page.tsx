@@ -135,7 +135,7 @@ export default function Page() {
 						</h2>
 					</div>
 
-					<ul className="grid grid-cols-1 gap-y-8 sm:grid-cols-3 sm:gap-10">
+					<ul className="-grid hidden grid-cols-1 gap-y-8 sm:grid-cols-3 sm:gap-10">
 						{PAYMENT_PROCESS_STEPS.map(({ title, description }, id) => (
 							<PaymentBox
 								title={title}
@@ -147,7 +147,7 @@ export default function Page() {
 					</ul>
 				</section>
 
-				<div className="flex h-120 w-full items-center justify-center bg-blue-100/30 px-6 md:h-140">
+				<div className="-mb-24 flex h-120 w-full items-center justify-center bg-blue-100/30 px-6 sm:mb-0 md:h-140">
 					<Testimonials />
 				</div>
 
