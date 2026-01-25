@@ -16,7 +16,7 @@ export default function Header() {
 						<p className="hidden text-center text-white sm:block lg:text-left">
 							Assign projects with ease and get reliable results. Gaenr connects
 							you with verified student experts who deliver efficiently, so you
-							can focus on what matters.
+							can focus on what matters
 						</p>
 					</article>
 

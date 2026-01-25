@@ -18,7 +18,6 @@ export default function Page() {
 
 			<main className="flex flex-col gap-y-24 py-12 lg:py-24">
 				<section className="lg:max-w-8xl mx-auto grid w-full max-w-3xl grid-cols-1 items-center gap-y-16 px-6 lg:grid-cols-2 lg:gap-x-24">
-					{/* Section 1 left */}
 					<article className="lg:gapy-y-12 flex flex-col items-start gap-y-8">
 						<h2 className="flex flex-col items-center self-stretch text-[clamp(1rem,7vw,1.8rem)] font-semibold text-zinc-700 sm:items-start sm:gap-y-2 sm:text-3xl">
 							<p>More than a platform</p>
@@ -41,7 +40,6 @@ export default function Page() {
 						<MiniLink href="/about">Know more</MiniLink>
 					</article>
 
-					{/* Section 1 right */}
 					<div className="relative mx-auto aspect-4/3 w-full max-w-sm">
 						<Image src="/svgs/brand-arrow.svg" alt="Brand Arrow" fill />
 					</div>
@@ -102,7 +100,6 @@ export default function Page() {
 					<section className="lg:max-w-8xl mx-auto grid w-full max-w-3xl grid-cols-1 items-center gap-y-16 px-6 lg:grid-cols-2 lg:gap-x-24">
 						<div className="">left content</div>
 
-						{/* Section 4 right */}
 						<div className="space-y-10">
 							<p className="text-primary-dark text-lg font-semibold">
 								For clients
@@ -127,24 +124,26 @@ export default function Page() {
 					</section>
 				</div>
 
-				<section className="mx-auto w-full max-w-3xl space-y-16 px-6 lg:max-w-7xl">
-					<div className="col-span-full">
+				<section className="mx-auto flex w-full max-w-3xl flex-col items-center gap-y-16 px-6 lg:max-w-7xl">
+					<div className="col-span-full self-stretch">
 						<h2 className="flex flex-col items-center text-[clamp(1rem,7vw,1.8rem)] font-semibold text-zinc-700 sm:flex-row sm:gap-x-2.5 sm:text-3xl">
 							<p className="text-primary-dark">Fast simple secure</p>
 							<p>payment process</p>
 						</h2>
 					</div>
 
-					<ul className="-grid hidden grid-cols-1 gap-y-8 sm:grid-cols-3 sm:gap-10">
+					<ul className="grid grid-cols-1 gap-y-8 self-stretch sm:grid-cols-2 sm:gap-10 lg:grid-cols-3">
 						{PAYMENT_PROCESS_STEPS.map(({ title, description }, id) => (
 							<PaymentBox
+								id={id}
 								title={title}
 								description={description}
-								id={id}
 								key={title}
 							/>
 						))}
 					</ul>
+
+					<MiniLink href="/payment-process">Learn more</MiniLink>
 				</section>
 
 				<div className="-mb-24 flex h-120 w-full items-center justify-center bg-blue-100/30 px-6 sm:mb-0 md:h-140">
@@ -152,7 +151,7 @@ export default function Page() {
 				</div>
 
 				<div className="sm:px-6">
-					<section className="bg-primary relative mx-auto flex w-full max-w-6xl flex-col gap-y-8 overflow-hidden p-10 sm:rounded-3xl">
+					<section className="bg-primary relative mx-auto flex w-full max-w-6xl flex-col gap-y-8 overflow-hidden p-10 sm:gap-y-12 sm:rounded-3xl">
 						<article className="relative z-10 w-full sm:space-y-4">
 							<h3 className="flex flex-col items-center justify-center text-[clamp(1rem,7vw,1.8rem)] font-semibold text-white sm:gap-x-2.5 sm:text-3xl lg:flex-row">
 								<p>Got skills?</p>
@@ -160,15 +159,15 @@ export default function Page() {
 									Let’s turn them into opportunity
 								</p>
 							</h3>
-							<p className="hidden text-sky-200 sm:block lg:text-lg">
+							<p className="mx-auto hidden max-w-4xl text-center text-sky-200 sm:block lg:text-lg">
 								Join Gaenr to access real demand, fair pay, and support that
-								understands Bangladesh’s market. No more undercutting; just fair
-								rates, fast payments, and continuous work.
+								understands Bangladesh’s market. No more undercutting, just fair
+								rates, fast payments, and continuous work
 							</p>
 						</article>
 
 						<div className="relative z-10 mx-auto grid w-full grid-cols-1 place-items-center gap-y-14 md:grid-cols-2">
-							<div className="flex flex-col gap-y-8 md:gap-y-10">
+							<div className="flex flex-col gap-y-8 md:-mt-10 md:gap-y-10">
 								<p className="hidden text-xl font-semibold text-white md:-mb-4 md:block">
 									Why join?
 								</p>
