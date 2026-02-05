@@ -1,15 +1,17 @@
 import PaymentBox from '@/components/features/payment-box'
 import ServiceBox from '@/components/features/service-box'
-import { BadgeCheckIcon, MessageIcon } from '@/components/icons'
+import { BadgeCheckIcon } from '@/components/icons'
+import { BrandArrow } from '@/components/ui/brand-arrow'
 import Button from '@/components/ui/button'
 import Header from '@/components/ui/header'
+import Iphone from '@/components/ui/iphone'
+import { IphoneMockup } from '@/components/ui/iphone-mockup'
 import MiniLink from '@/components/ui/mini-link'
 import Testimonials from '@/components/ui/testimonials'
 import { CLIENT_BENEFITS } from '@/data/clients-benefit'
 import { PAYMENT_PROCESS_STEPS } from '@/data/payment-process-steps'
 import { SERVICE_NAMES } from '@/utils/constants'
 import Image from 'next/image'
-import iPhoneMockup from '../../public/svgs/iPhone-mockup.svg'
 
 export default function Page() {
 	return (
@@ -40,16 +42,14 @@ export default function Page() {
 						<MiniLink href="/about">Know more</MiniLink>
 					</article>
 
-					<div className="relative mx-auto aspect-4/3 w-full max-w-sm">
-						<Image src="/svgs/brand-arrow.svg" alt="Brand Arrow" fill />
+					<div className="mx-auto aspect-4/3 w-full max-w-sm">
+						<BrandArrow className="h-auto w-full" />
 					</div>
 				</section>
 
 				<section className="lg:max-w-8xl mx-auto grid w-full max-w-3xl grid-cols-1 items-center gap-y-16 px-6 lg:grid-cols-2 lg:gap-x-24">
-					{/* Section 2 left */}
 					<div>content left</div>
 
-					{/* Section 2 right */}
 					<article className="lg:gapy-y-12 flex flex-col items-start gap-y-8">
 						<h2 className="flex flex-col items-center self-stretch text-[clamp(1rem,7vw,1.8rem)] font-semibold text-zinc-700 sm:items-start sm:gap-y-2 sm:text-3xl">
 							<p>We're still building</p>
@@ -197,28 +197,9 @@ export default function Page() {
 							</div>
 
 							<div className="relative w-55 md:w-full md:max-w-45">
-								<Image
-									src={iPhoneMockup}
-									alt="iPhone mockup"
-									className="w-full"
-								/>
+								<IphoneMockup className="w-full" />
 
-								<div className="absolute top-1/4 left-1/2 -translate-x-1/2">
-									<div className="rounded-2xl-plus grid grid-cols-[auto_9rem_auto] items-center gap-x-3 border border-slate-200/30 bg-white/70 p-2.5 shadow-sm saturate-150 backdrop-blur-xl md:grid-cols-[auto_8rem_auto]">
-										<div className="flex size-11 items-center justify-center rounded-xl bg-white">
-											<MessageIcon className="text-primary size-7" />
-										</div>
-
-										<div>
-											<p className="text-sm font-medium">Gaenr</p>
-											<p className="text-xs text-nowrap">Payment received</p>
-										</div>
-
-										<p className="text-primary-dark opacity60 self-start text-xs">
-											now
-										</p>
-									</div>
-								</div>
+								<Iphone />
 							</div>
 						</div>
 

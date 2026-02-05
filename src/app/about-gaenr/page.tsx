@@ -1,0 +1,140 @@
+import {
+	CommunityIcon,
+	EmpowermentIcon,
+	PersonalSupportIcon,
+	SimplifiedOnboardingIcon,
+	TakaIcon,
+	ZeroPercentIcon
+} from '@/components/icons'
+import Breadcrumbs from '@/components/ui/breadcrumbs'
+import LogoCard from '@/components/ui/logo-card'
+
+export default function Page() {
+	return (
+		<main>
+			<section className="bg-primary flex w-full flex-col items-center justify-center gap-y-7 bg-[url('/hero-2.png')] bg-cover bg-center bg-no-repeat py-12">
+				<Breadcrumbs href="about-gaenr" title="About" />
+
+				<article className="flex w-full max-w-xl flex-col items-center gap-y-4 px-6 sm:gap-y-6">
+					<h1 className="text-center text-3xl font-semibold text-white">
+						Heading
+					</h1>
+					<p className="hidden text-center text-white sm:block">
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+						aperiam dolores. Harum tempora dicta dolorem voluptate eius.
+					</p>
+				</article>
+			</section>
+
+			<section className="mx-auto my-12 flex w-full max-w-3xl flex-col items-center gap-y-16 px-6 lg:my-24 lg:max-w-6xl lg:flex-row lg:gap-x-18 xl:gap-x-24">
+				<LogoCard />
+
+				<article className="lg:gapy-y-12 flex flex-col items-start gap-y-6">
+					<h2 className="text-[clamp(1rem,7vw,1.8rem)] font-semibold text-zinc-700">
+						<p>What is Gaenr?</p>
+					</h2>
+					<div className="space-y-3">
+						<p>
+							Gaenr is Bangladesh’s dedicated marketplace for verified experts,
+							built for the local economy. We connect a diverse talent pool
+							students, independent professionals, and entrepreneurs with
+							clients seeking high quality work at competitive local rates.
+						</p>
+						<p>
+							Unlike global platforms weighed down by high commissions and
+							complex payments, Gaenr prioritizes simplicity and local
+							relevance, handling logistics and administration so experts and
+							clients can focus solely on great outcomes.
+						</p>
+					</div>
+				</article>
+			</section>
+
+			<section className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-10 px-6 sm:grid-cols-3">
+				<div className="flex flex-col rounded-4xl bg-zinc-100 p-6">
+					<h3 className="text-2xl font-medium">Our Mission</h3>
+					<div className="mt-6 mb-12 h-1 w-14 rounded-full bg-zinc-800" />
+					<p className="text-sm">
+						Connecting experts and outsourcers through a trusted, intelligent
+						platform for real impact.
+					</p>
+				</div>
+
+				<div className="flex flex-col rounded-4xl bg-zinc-100 p-6">
+					<h3 className="text-2xl font-medium">Our Goal</h3>
+					<div className="mt-6 mb-12 h-1 w-14 rounded-full bg-zinc-800" />
+					<p className="text-sm">
+						To build a trusted, community driven freelancing ecosystem where
+						skills meet opportunity.
+					</p>
+				</div>
+
+				<div className="flex flex-col rounded-4xl bg-zinc-100 p-6">
+					<h3 className="text-2xl font-medium">Our Dream</h3>
+					<div className="mt-6 mb-12 h-1 w-14 rounded-full bg-zinc-800" />
+					<p className="text-sm">
+						We’re building an effortless platform that connects experts and
+						outsourcers without barriers.
+					</p>
+				</div>
+			</section>
+
+			<section className="mx-auto my-12 flex w-full flex-col items-center gap-y-12 px-6 lg:my-24 lg:max-w-6xl lg:items-start">
+				<h2 className="self-stretch text-center text-[clamp(1rem,7vw,1.8rem)] font-semibold text-zinc-700">
+					<p>Gaenr's Unique Offering</p>
+				</h2>
+
+				<ul className="grid w-full grid-cols-1 justify-center gap-x-5 gap-y-16 sm:grid-cols-2 sm:gap-y-20 md:grid-cols-3">
+					<li className="flex flex-col items-center gap-y-10">
+						<div className="bg-primary flex size-16 rotate-45 items-center justify-center rounded-xl">
+							<TakaIcon className="size-12 -rotate-45 text-white" />
+						</div>
+						<p className="text-center text-lg font-medium">
+							Local currency payments
+						</p>
+					</li>
+					<li className="flex flex-col items-center gap-y-10">
+						<div className="bg-primary flex size-16 rotate-45 items-center justify-center rounded-xl">
+							<ZeroPercentIcon className="size-9 -rotate-45 text-white" />
+						</div>
+						<p className="text-center text-lg font-medium">
+							Zero platform fees
+						</p>
+					</li>
+					<li className="flex flex-col items-center gap-y-10">
+						<div className="bg-primary flex size-16 rotate-45 items-center justify-center rounded-xl">
+							<PersonalSupportIcon className="size-9 -rotate-45 text-white" />
+						</div>
+						<p className="text-center text-lg font-medium">
+							Dedicated personal support
+						</p>
+					</li>
+					<li className="flex flex-col items-center gap-y-10">
+						<div className="bg-primary flex size-16 rotate-45 items-center justify-center rounded-xl">
+							<EmpowermentIcon className="size-9 -rotate-45 text-white" />
+						</div>
+						<p className="text-center text-lg font-medium">
+							Student focused empowerment
+						</p>
+					</li>
+					<li className="flex flex-col items-center gap-y-10">
+						<div className="bg-primary flex size-16 rotate-45 items-center justify-center rounded-xl">
+							<CommunityIcon className="size-9 -rotate-45 text-white" />
+						</div>
+						<p className="text-center text-lg font-medium">
+							Community over competition
+						</p>
+					</li>
+					<li className="flex flex-col items-center gap-y-10">
+						<div className="bg-primary flex size-16 rotate-45 items-center justify-center rounded-xl">
+							<SimplifiedOnboardingIcon className="size-9 -rotate-45 text-white" />
+						</div>
+						<p className="text-center text-lg font-medium">
+							Simplified onboarding
+						</p>
+					</li>
+				</ul>
+			</section>
+		</main>
+	)
+}

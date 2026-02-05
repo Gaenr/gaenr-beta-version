@@ -32,9 +32,9 @@ export default function Button({
 	}
 	const radiusClasses = {
 		none: 'rounded-none',
-		sm: 'rounded-sm',
-		md: 'rounded-md',
-		lg: 'rounded-lg',
+		sm: 'rounded-md',
+		md: 'rounded-lg',
+		lg: 'rounded-xl',
 		full: 'rounded-full'
 	}
 
