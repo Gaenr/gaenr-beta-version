@@ -70,7 +70,7 @@ export default function FeedbackForm() {
 				</label>
 				<textarea
 					id="feedback"
-					className="h-40 w-full resize-none rounded-2xl border border-zinc-200 px-4 py-2 duration-300 outline-none placeholder:text-neutral-500 focus:border-zinc-400"
+					className="h-40 w-full resize-none rounded-2xl border border-gray-200 px-4 py-2 duration-300 outline-none placeholder:text-neutral-500 focus:border-gray-400"
 					{...register('sharedBy')}
 				/>
 				<p className="line-clamp-1 text-xs break-all text-rose-300">

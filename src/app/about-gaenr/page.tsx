@@ -30,7 +30,7 @@ export default function Page() {
 				<LogoCard />
 
 				<article className="lg:gapy-y-12 flex flex-col items-start gap-y-6">
-					<h2 className="text-[clamp(1rem,7vw,1.8rem)] font-semibold text-zinc-700">
+					<h2 className="text-[clamp(1rem,7vw,1.8rem)] font-semibold text-gray-700">
 						<p>What is Gaenr?</p>
 					</h2>
 					<div className="space-y-3">
@@ -51,27 +51,27 @@ export default function Page() {
 			</section>
 
 			<section className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-10 px-6 sm:grid-cols-3">
-				<div className="flex flex-col rounded-4xl bg-zinc-100 p-6">
+				<div className="flex flex-col rounded-4xl bg-gray-100 p-6">
 					<h3 className="text-2xl font-medium">Our Mission</h3>
-					<div className="mt-6 mb-12 h-1 w-14 rounded-full bg-zinc-800" />
+					<div className="mt-6 mb-12 h-1 w-14 rounded-full bg-gray-800" />
 					<p className="text-sm">
 						Connecting experts and outsourcers through a trusted, intelligent
 						platform for real impact.
 					</p>
 				</div>
 
-				<div className="flex flex-col rounded-4xl bg-zinc-100 p-6">
+				<div className="flex flex-col rounded-4xl bg-gray-100 p-6">
 					<h3 className="text-2xl font-medium">Our Goal</h3>
-					<div className="mt-6 mb-12 h-1 w-14 rounded-full bg-zinc-800" />
+					<div className="mt-6 mb-12 h-1 w-14 rounded-full bg-gray-800" />
 					<p className="text-sm">
 						To build a trusted, community driven freelancing ecosystem where
 						skills meet opportunity.
 					</p>
 				</div>
 
-				<div className="flex flex-col rounded-4xl bg-zinc-100 p-6">
+				<div className="flex flex-col rounded-4xl bg-gray-100 p-6">
 					<h3 className="text-2xl font-medium">Our Dream</h3>
-					<div className="mt-6 mb-12 h-1 w-14 rounded-full bg-zinc-800" />
+					<div className="mt-6 mb-12 h-1 w-14 rounded-full bg-gray-800" />
 					<p className="text-sm">
 						We’re building an effortless platform that connects experts and
 						outsourcers without barriers.
@@ -80,7 +80,7 @@ export default function Page() {
 			</section>
 
 			<section className="mx-auto my-12 flex w-full flex-col items-center gap-y-12 px-6 lg:my-24 lg:max-w-6xl lg:items-start">
-				<h2 className="self-stretch text-center text-[clamp(1rem,7vw,1.8rem)] font-semibold text-zinc-700">
+				<h2 className="self-stretch text-center text-[clamp(1rem,7vw,1.8rem)] font-semibold text-gray-700">
 					<p>Gaenr's Unique Offering</p>
 				</h2>
 

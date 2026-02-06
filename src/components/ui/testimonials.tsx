@@ -78,7 +78,7 @@ export default function Testimonials() {
 										<p className="text-lg font-semibold md:text-xl">
 											{testimonial.name}
 										</p>
-										<p className="text-sm font-medium text-zinc-500">
+										<p className="text-sm font-medium text-gray-500">
 											{testimonial.title}
 										</p>
 									</div>
@@ -91,7 +91,7 @@ export default function Testimonials() {
 			<div className="mx-auto flex w-max gap-x-5">
 				{Array.from({ length: 3 }).map((_, i) => (
 					<button
-						className="relative size-2 overflow-hidden rounded-full bg-zinc-300 md:size-2.5"
+						className="relative size-2 overflow-hidden rounded-full bg-gray-300 md:size-2.5"
 						onClick={() => setIndex(i)}
 						key={i}>
 						<AnimatePresence mode="wait">

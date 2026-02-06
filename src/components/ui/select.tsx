@@ -56,7 +56,7 @@ export function Select({
 					{label}
 				</label>
 				<button
-					className={`${showDropdown && 'text-neutral-400'} flex w-full! items-center justify-between rounded-2xl border border-zinc-200 px-4 py-3`}
+					className={`${showDropdown && 'text-neutral-400'} flex w-full! items-center justify-between rounded-2xl border border-gray-200 px-4 py-3`}
 					disabled={isDisabled}
 					onClick={() => setShowDropdown(!showDropdown)}>
 					{selected ? (
@@ -84,7 +84,7 @@ export function Select({
 								stiffness: 300,
 								duration: 0.4
 							}}
-							className="absolute top-full left-1/2 z-20 -translate-x-1/2 -translate-y-4 overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-2xl">
+							className="absolute top-full left-1/2 z-20 -translate-x-1/2 -translate-y-4 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-2xl">
 							<ul className="max-h-56 min-w-52 space-y-1 overflow-y-auto p-1.5">
 								{children}
 							</ul>

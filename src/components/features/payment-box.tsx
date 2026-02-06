@@ -30,10 +30,10 @@ export default function PaymentBox({
 			<Icon className="text-primary size-7 shrink-0" />
 			<div className="flex h-full flex-col gap-y-1">
 				<p className="font-medium">{title}</p>
-				<p className="max-w-xs text-sm font-medium text-zinc-500">
+				<p className="max-w-xs text-sm font-medium text-gray-500">
 					{description}
 				</p>
-				<div className="flex h-4 w-8 translate-y-1 items-center justify-center rounded-full bg-zinc-100 text-[10px] leading-0 font-bold text-nowrap text-zinc-400">
+				<div className="flex h-4 w-8 translate-y-1 items-center justify-center rounded-full bg-gray-100 text-[10px] leading-0 font-bold text-nowrap text-gray-400">
 					{id + 1} / 5
 				</div>
 			</div>

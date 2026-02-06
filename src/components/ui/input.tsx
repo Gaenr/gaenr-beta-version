@@ -55,7 +55,7 @@ export default function Input({
 				defaultValue={defaultValue}
 				placeholder={placeholder}
 				autoComplete={label}
-				className={`${classNames?.input} bg[#f5f5f5] w-full rounded-2xl border border-zinc-200 px-4 py-3 duration-300 outline-none placeholder:text-neutral-500 hover:bg-zinc-200/80 focus:bg-zinc-200/80`}
+				className={`${classNames?.input} bg[#f5f5f5] w-full rounded-2xl border border-gray-200 px-4 py-3 duration-300 outline-none placeholder:text-neutral-500 hover:bg-gray-200/80 focus:bg-gray-200/80`}
 				readOnly={isReadOnly}
 				disabled={isDisabled}
 				{...register}

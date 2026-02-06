@@ -47,7 +47,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${dmSans.variable} ${spaceMono.variable} grid min-h-dvh grid-rows-[max-content_1fr] bg-white font-sans text-zinc-800 antialiased`}>
+				className={`${dmSans.variable} ${spaceMono.variable} grid min-h-dvh grid-rows-[max-content_1fr] bg-white font-sans text-gray-800 antialiased`}>
 				<PWARegister />
 
 				<NavBar />

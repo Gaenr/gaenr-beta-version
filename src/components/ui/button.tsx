@@ -22,7 +22,7 @@ export default function Button({
 	onClick?: () => void
 }) {
 	const colorClasses = {
-		default: 'bg-white text-zinc-700 hover:text-primary active:text-primary',
+		default: 'bg-white text-gray-700 hover:text-primary active:text-primary',
 		primary: 'from-primary-light to-primary bg-linear-to-br text-white'
 	}
 	const sizesClasses = {

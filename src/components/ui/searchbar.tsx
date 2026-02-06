@@ -26,7 +26,7 @@ export default function SearchBar() {
 				name="search"
 				placeholder='Search To "Find Services"'
 				autoComplete="OFF"
-				className="block h-12 w-full self-stretch rounded-full bg-white pr-18 pl-4 text-sm font-medium outline-2 outline-offset-2 outline-transparent duration-200 placeholder:text-zinc-400 focus:outline-white"
+				className="block h-12 w-full self-stretch rounded-full bg-white pr-18 pl-4 text-sm font-medium outline-2 outline-offset-2 outline-transparent duration-200 placeholder:text-gray-400 focus:outline-white"
 			/>
 			<button
 				type="submit"

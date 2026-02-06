@@ -1,14 +1,13 @@
 'use client'
 
-import Image from 'next/image'
-
 import { AnimatePresence, motion } from 'framer-motion'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 
 import { CloseIcon, MenuIcon } from '@/components/icons'
-import Button from './button'
+import Button from '@/components/ui/button'
+import { Logo } from '@/components/ui/logo'
 
 const navLinks = [
 	{
@@ -45,7 +44,7 @@ export default function NavBar() {
 						<li>
 							<Link href="/" className="flex items-center gap-x-3 lg:gap-x-4">
 								<div className="relative size-9 lg:size-11">
-									<Image src="/svgs/logo.svg" alt="Logo" fill />
+									<Logo className="h-auto w-full" />
 								</div>
 								<p className="text-3xl font-bold text-gray-800 lg:text-4xl">
 									Gaenr
@@ -63,7 +62,7 @@ export default function NavBar() {
 										exit={{ opacity: 0, scale: 0.8 }}
 										transition={{ duration: 0.1 }}
 										key="close">
-										<CloseIcon className="size-6 text-zinc-700/50" />
+										<CloseIcon className="size-6 text-gray-700/50" />
 									</motion.div>
 								) : (
 									<motion.div
@@ -72,7 +71,7 @@ export default function NavBar() {
 										exit={{ opacity: 0, scale: 0.8 }}
 										transition={{ duration: 0.1 }}
 										key="open">
-										<MenuIcon className="size-6.5 text-zinc-700" />
+										<MenuIcon className="size-6.5 text-gray-700" />
 									</motion.div>
 								)}
 							</AnimatePresence>
@@ -83,7 +82,7 @@ export default function NavBar() {
 							<li className="relative h-6.5 overflow-x-hidden" key={href}>
 								<Link
 									href={href}
-									className={`${pathname === href ? 'text-primary' : 'hover:text-primary text-zinc-700'} font-medium duration-200`}>
+									className={`${pathname === href ? 'text-primary' : 'hover:text-primary text-gray-700'} font-medium duration-200`}>
 									{label}
 								</Link>
 								<AnimatePresence mode="wait">
@@ -127,7 +126,7 @@ export default function NavBar() {
 							stiffness: 300,
 							mass: 0.5
 						}}
-						className="fixed inset-x-0 top-(--navbar-height) z-40 flex h-[calc(100vh-var(--navbar-height))] origin-top flex-col border-b border-zinc-100 bg-white p-8 lg:hidden"
+						className="fixed inset-x-0 top-(--navbar-height) z-40 flex h-[calc(100vh-var(--navbar-height))] origin-top flex-col border-b border-gray-100 bg-white p-8 lg:hidden"
 						key="menu">
 						<ul className="flex max-w-full flex-col gap-y-4">
 							<li className="mb-2">
@@ -141,7 +140,7 @@ export default function NavBar() {
 								<li key={href}>
 									<Link
 										href={href}
-										className={`font-medium ${pathname === href ? 'text-primary border-primary border-b-2' : 'text-zinc-700'} pb-px text-lg`}
+										className={`font-medium ${pathname === href ? 'text-primary border-primary border-b-2' : 'text-gray-700'} pb-px text-lg`}
 										onClick={() => setShowMenu(false)}>
 										{label}
 									</Link>

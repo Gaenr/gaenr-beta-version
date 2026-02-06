@@ -21,7 +21,7 @@ export default function Page() {
 			<main className="flex flex-col gap-y-24 py-12 lg:py-24">
 				<section className="lg:max-w-8xl mx-auto grid w-full max-w-3xl grid-cols-1 items-center gap-y-16 px-6 lg:grid-cols-2 lg:gap-x-24">
 					<article className="lg:gapy-y-12 flex flex-col items-start gap-y-8">
-						<h2 className="flex flex-col items-center self-stretch text-[clamp(1rem,7vw,1.8rem)] font-semibold text-zinc-700 sm:items-start sm:gap-y-2 sm:text-3xl">
+						<h2 className="flex flex-col items-center self-stretch text-[clamp(1rem,7vw,1.8rem)] font-semibold text-gray-700 sm:items-start sm:gap-y-2 sm:text-3xl">
 							<p>More than a platform</p>
 							<p className="text-primary-dark">A pathway</p>
 						</h2>
@@ -51,7 +51,7 @@ export default function Page() {
 					<div>content left</div>
 
 					<article className="lg:gapy-y-12 flex flex-col items-start gap-y-8">
-						<h2 className="flex flex-col items-center self-stretch text-[clamp(1rem,7vw,1.8rem)] font-semibold text-zinc-700 sm:items-start sm:gap-y-2 sm:text-3xl">
+						<h2 className="flex flex-col items-center self-stretch text-[clamp(1rem,7vw,1.8rem)] font-semibold text-gray-700 sm:items-start sm:gap-y-2 sm:text-3xl">
 							<p>We're still building</p>
 							<p className="text-primary-dark">But you can start today</p>
 						</h2>
@@ -80,7 +80,7 @@ export default function Page() {
 				</section>
 
 				<section className="lg:max-w-8xl mx-auto flex w-full flex-col items-center gap-y-12 px-6 lg:items-start">
-					<h2 className="flex flex-col items-center text-[clamp(1rem,7vw,1.8rem)] font-semibold text-zinc-700 sm:flex-row sm:gap-x-2.5 sm:text-3xl">
+					<h2 className="flex flex-col items-center text-[clamp(1rem,7vw,1.8rem)] font-semibold text-gray-700 sm:flex-row sm:gap-x-2.5 sm:text-3xl">
 						<p>Services that</p>
 						<p className="text-primary-dark">move you forward</p>
 					</h2>
@@ -114,7 +114,7 @@ export default function Page() {
 											<BadgeCheckIcon className="size-4 text-white" />
 										</div>
 										<p className="font-medium">{title}</p>
-										<p className="text-sm font-medium text-zinc-500">
+										<p className="text-sm font-medium text-gray-500">
 											{description}
 										</p>
 									</li>
@@ -126,7 +126,7 @@ export default function Page() {
 
 				<section className="mx-auto flex w-full max-w-3xl flex-col items-center gap-y-16 px-6 lg:max-w-7xl">
 					<div className="col-span-full self-stretch">
-						<h2 className="flex flex-col items-center text-[clamp(1rem,7vw,1.8rem)] font-semibold text-zinc-700 sm:flex-row sm:gap-x-2.5 sm:text-3xl">
+						<h2 className="flex flex-col items-center text-[clamp(1rem,7vw,1.8rem)] font-semibold text-gray-700 sm:flex-row sm:gap-x-2.5 sm:text-3xl">
 							<p className="text-primary-dark">Fast simple secure</p>
 							<p>payment process</p>
 						</h2>
