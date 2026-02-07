@@ -16,36 +16,42 @@ import Breadcrumbs from '@/components/ui/breadcrumbs'
 const TESTIMONIALS = [
 	{
 		id: 0,
-		image: '/testimonials/avatar-full-1.jpg',
+		avatarSrc: '/testimonials/avatar-full-1.jpg',
 		name: 'Darren Dunlap',
-		title: 'CEO & Founder at Flex.co',
+		jobTitle: 'CEO & Founder at Flex.co',
 		quote:
 			'Work on your terms every day and still earn a dependable, full-time paycheck',
 		videoSrc: 'https://www.youtube.com/embed/gmuTjeQUbTM?si=lUkgTG1KyxuBsmyb',
-		facebook: '#',
-		linkedin: '#'
+		socials: {
+			facebook: '#',
+			linkedin: '#'
+		}
 	},
 	{
 		id: 1,
-		image: '/testimonials/avatar-full-2.jpg',
+		avatarSrc: '/testimonials/avatar-full-2.jpg',
 		name: 'Elara Moonfall',
-		title: 'CEO, Luminary Tech Solutions',
+		jobTitle: 'CEO, Luminary Tech Solutions',
 		quote:
 			'Achieve a full-time income while designing your own flexible schedule and lifestyle',
 		videoSrc: 'https://www.youtube.com/embed/wN13YeqEaqk?si=yJp4cfADehMOD0-2',
-		facebook: '#',
-		linkedin: '#'
+		socials: {
+			facebook: '#',
+			linkedin: '#'
+		}
 	},
 	{
 		id: 2,
-		image: '/testimonials/avatar-full-3.jpg',
+		avatarSrc: '/testimonials/avatar-full-3.jpg',
 		name: 'Ronan Ashcroft',
-		title: 'Founder & CEO, Ashcroft Dynamics',
+		jobTitle: 'Founder & CEO, Ashcroft Dynamics',
 		quote:
 			'Enjoy the freedom of flexible hours while building a reliable income',
 		videoSrc: 'https://www.youtube.com/embed/iOeebAM_C5g?si=ipndZkXY_wz9rMte',
-		facebook: '#',
-		linkedin: '#'
+		socials: {
+			facebook: '#',
+			linkedin: '#'
+		}
 	}
 ]
 
@@ -55,23 +61,26 @@ export default function Page() {
 
 	return (
 		<>
-			<main>
+			<main className="flex flex-col items-center gap-y-12 pb-12 lg:gap-y-24 lg:pb-24">
 				<section className="bg-primary flex w-full flex-col items-center justify-center gap-y-7 bg-[url('/hero-2.png')] bg-cover bg-center bg-no-repeat py-12">
 					<Breadcrumbs href="testimonials" title="Testimonials" />
 
 					<article className="flex w-full max-w-xl flex-col items-center gap-y-4 px-6 sm:gap-y-6">
-						<h1 className="text-center text-3xl font-semibold text-white">
-							Header
+						<h1 className="text-3xl font-semibold text-white">
+							Title / Header
 						</h1>
-						<p className="hidden text-center text-white sm:block">Subheading</p>
+						<p className="hidden text-center text-white sm:block">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit Quos eanon
+							doloremque quod alias voluptatibus voluptates
+						</p>
 					</article>
 				</section>
 
-				<section className="mx-auto my-12 w-full max-w-5xl px-6 lg:mt-24 lg:mb-16">
+				<section className="w-full max-w-5xl px-6">
 					<AnimatePresence mode="wait">
 						{TESTIMONIALS.map(
-							(testimonial) =>
-								index === testimonial.id && (
+							(testimonial, key) =>
+								index === key && (
 									<motion.div
 										initial={{
 											opacity: 0,
@@ -93,11 +102,11 @@ export default function Page() {
 											ease: [0.4, 0, 0.2, 1]
 										}}
 										className="grid grid-cols-1 gap-12 md:grid-cols-6"
-										key={testimonial.id}>
+										key={key}>
 										<div className="relative mx-auto aspect-3/4 w-full max-w-xs overflow-hidden rounded-4xl bg-gray-200 md:col-span-2">
 											<Image
-												src={testimonial.image}
-												alt=""
+												src={testimonial.avatarSrc}
+												alt={testimonial.name}
 												fill
 												className="object-cover"
 											/>
@@ -121,19 +130,21 @@ export default function Page() {
 														{testimonial.name}
 													</p>
 													<p className="text-sm font-medium text-gray-500">
-														{testimonial.title}
+														{testimonial.jobTitle}
 													</p>
 												</div>
 
 												<div className="flex items-center gap-x-6">
 													<Link
-														href={testimonial.facebook}
-														className={`flex size-7 items-center justify-center rounded-xl border border-slate-200 text-sm text-gray-500 duration-200 hover:text-gray-800 active:text-gray-800`}>
+														href={testimonial.socials.facebook}
+														target="_blank"
+														className="flex size-7 items-center justify-center rounded-xl border border-gray-200 text-gray-500 duration-200 hover:text-gray-800 active:text-gray-800">
 														<FacebookIcon className="h-4 w-auto" />
 													</Link>
 													<Link
-														href={testimonial.linkedin}
-														className={`flex size-7 items-center justify-center rounded-xl border border-slate-200 text-sm text-gray-500 duration-200 hover:text-gray-800 active:text-gray-800`}>
+														href={testimonial.socials.linkedin}
+														target="_blank"
+														className="flex size-7 items-center justify-center rounded-xl border border-gray-200 text-gray-500 duration-200 hover:text-gray-800 active:text-gray-800">
 														<LinkedinIcon className="h-4 w-auto" />
 													</Link>
 												</div>
@@ -145,8 +156,13 @@ export default function Page() {
 					</AnimatePresence>
 				</section>
 
-				<section className="mx-auto my-12 grid w-full max-w-5xl grid-cols-6 gap-12 px-6 lg:mt-16 lg:mb-20">
-					<div className="col-span-2 flex w-full items-center justify-center gap-x-6">
+				<section className="mx-auto grid w-full max-w-4xl grid-cols-6 gap-12 px-6">
+					<div className="col-span-full flex w-full items-center justify-center gap-x-6">
+						<p className="w-20 text-center text-sm font-medium">
+							{index + 1}/3
+						</p>
+						<div className="h-0.5 w-full grow rounded-full bg-gray-200/60" />
+
 						<SliderButton
 							direction="left"
 							onClick={() => setIndex(index > 0 ? index - 1 : 2)}
@@ -196,7 +212,7 @@ export default function Page() {
 						className="fixed inset-0 z-9999 flex h-screen w-screen items-center justify-center bg-black/30 backdrop-blur-sm"
 						onClick={() => setShowModal(false)}>
 						<div
-							className="w-[80dvw] overflow-hidden rounded-3xl border-4 border-white bg-gray-200"
+							className="w-[70dvw] overflow-hidden rounded-3xl border-4 border-white bg-gray-200"
 							onClick={(e) => e.stopPropagation()}>
 							<iframe
 								src={TESTIMONIALS[index].videoSrc}
@@ -204,7 +220,8 @@ export default function Page() {
 								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 								referrerPolicy="strict-origin-when-cross-origin"
 								className="aspect-video"
-								allowFullScreen></iframe>
+								allowFullScreen
+							/>
 						</div>
 					</motion.div>
 				)}
@@ -222,10 +239,10 @@ function SliderButton({
 }) {
 	return (
 		<button
-			className={`group flex size-7 rounded-full border-2 border-gray-300 p-1 duration-200 hover:border-gray-400 active:scale-70 ${direction === 'left' ? '-left-36' : '-right-36'} items-center justify-center rounded-full bg-white`}
+			className={`${direction === 'left' ? '-left-36' : '-right-36'} flex size-7 shrink-0 items-center justify-center rounded-full border-2 border-gray-300 duration-200 hover:border-gray-400 active:scale-70`}
 			onClick={onClick}>
 			<ShortArrowIcon
-				className={`size-5 text-gray-600 ${direction === 'left' ? 'rotate-180' : 'rotate-0'}`}
+				className={`${direction === 'left' ? 'rotate-180' : 'rotate-0'} text-gray-600`}
 			/>
 		</button>
 	)
