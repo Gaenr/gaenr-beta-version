@@ -216,7 +216,7 @@ export default function Page() {
 						className="fixed inset-0 z-9999 flex h-screen w-screen items-center justify-center bg-black/30 backdrop-blur-sm"
 						onClick={() => setShowModal(false)}>
 						<div
-							className="w-[70dvw] overflow-hidden rounded-3xl border-4 border-white bg-gray-200"
+							className="w-[90dvw] overflow-hidden rounded-3xl border-4 border-white bg-gray-200 sm:w-[70dvw]"
 							onClick={(e) => e.stopPropagation()}>
 							<iframe
 								src={TESTIMONIALS[index].videoSrc}
