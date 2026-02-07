@@ -158,10 +158,10 @@ export default function Page() {
 
 				<section className="mx-auto grid w-full max-w-4xl grid-cols-6 gap-12 px-6">
 					<div className="col-span-full flex w-full items-center justify-center gap-x-6">
-						<p className="w-20 text-center text-sm font-medium">
+						<p className="hidden w-20 text-center text-sm font-medium lg:block">
 							{index + 1}/3
 						</p>
-						<div className="h-0.5 w-full grow rounded-full bg-gray-200/60" />
+						<div className="hidden h-0.5 w-full grow rounded-full bg-gray-200/60 lg:block" />
 
 						<SliderButton
 							direction="left"
@@ -239,7 +239,7 @@ function SliderButton({
 }) {
 	return (
 		<button
-			className={`${direction === 'left' ? '-left-36' : '-right-36'} flex size-7 shrink-0 items-center justify-center rounded-full border-2 border-gray-300 duration-200 hover:border-gray-400 active:scale-70`}
+			className={`${direction === 'left' ? '-left-36' : '-right-36'} flex size-7 shrink-0 items-center justify-center rounded-full border-2 border-gray-300 duration-200 hover:border-gray-400 active:scale-70 active:border-gray-400`}
 			onClick={onClick}>
 			<ShortArrowIcon
 				className={`${direction === 'left' ? 'rotate-180' : 'rotate-0'} text-gray-600`}

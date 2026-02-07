@@ -17,13 +17,11 @@ export default function Footer() {
 	const linkClasses = `text-sm text-gray-500 duration-200 hover:text-gray-800 active:text-gray-800`
 
 	return (
-		<div className="w-full border-t border-slate-100 py-10 lg:py-16">
+		<div className="w-full border-t border-gray-100 py-10 lg:py-16">
 			<footer className="max-w-8xl mx-auto grid w-full grid-cols-2 gap-12 px-6 lg:grid-cols-7">
 				<div className="col-span-full space-y-6 lg:col-span-3">
 					<Link href="/" className="flex w-max items-center gap-x-3 lg:gap-x-4">
-						<div className="relative size-9 lg:size-11">
-							<Logo className="h-auto w-full" />
-						</div>
+						<Logo className="size-9 lg:size-11" />
 						<p className="text-3xl font-bold text-gray-800 lg:text-4xl">
 							Gaenr
 						</p>
@@ -116,28 +114,32 @@ export default function Footer() {
 						<li>
 							<Link
 								href="#"
-								className={`${linkClasses} flex size-7 items-center justify-center rounded-xl border border-slate-200`}>
+								target="_blank"
+								className={`${linkClasses} flex size-7 items-center justify-center rounded-xl border border-gray-200`}>
 								<FacebookIcon className="h-4 w-auto" />
 							</Link>
 						</li>
 						<li>
 							<Link
 								href="#"
-								className={`${linkClasses} flex size-7 items-center justify-center rounded-xl border border-slate-200`}>
+								target="_blank"
+								className={`${linkClasses} flex size-7 items-center justify-center rounded-xl border border-gray-200`}>
 								<InstagramIcon className="h-4 w-auto" />
 							</Link>
 						</li>
 						<li>
 							<Link
 								href="#"
-								className={`${linkClasses} flex size-7 items-center justify-center rounded-xl border border-slate-200`}>
+								target="_blank"
+								className={`${linkClasses} flex size-7 items-center justify-center rounded-xl border border-gray-200`}>
 								<LinkedinIcon className="h-4 w-auto" />
 							</Link>
 						</li>
 						<li>
 							<Link
 								href="#"
-								className={`${linkClasses} flex size-7 items-center justify-center rounded-xl border border-slate-200`}>
+								target="_blank"
+								className={`${linkClasses} flex size-7 items-center justify-center rounded-xl border border-gray-200`}>
 								<XIcon className="h-3 w-auto" />
 							</Link>
 						</li>

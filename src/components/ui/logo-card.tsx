@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 export default function LogoCard() {
 	return (
-		<div className="group shrink0 relative w-full max-w-xs">
+		<div className="group relative w-full max-w-xs">
 			<div className="shadow-card z-10 aspect-square w-full rounded-4xl bg-white p-14 duration-500 hover:-translate-x-6 hover:-translate-y-6">
 				<motion.div
 					initial={{
