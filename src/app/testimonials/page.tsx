@@ -9,6 +9,7 @@ import {
 	FacebookIcon,
 	LinkedinIcon,
 	PlayIcon,
+	QuoteIcon,
 	ShortArrowIcon
 } from '@/components/icons'
 import Breadcrumbs from '@/components/ui/breadcrumbs'
@@ -120,9 +121,12 @@ export default function Page() {
 										</div>
 
 										<div className="flex flex-col justify-between gap-y-8 md:col-span-4 md:my-10">
-											<p className="text-center text-xl md:text-start lg:text-2xl">
-												{testimonial.quote}
-											</p>
+											<div className="relative">
+												<QuoteIcon className="absolute top-0 left-0 -z-10 size-10 translate-x-1/3 -translate-y-1/3 sm:size-12" />
+												<p className="text-center text-xl md:text-start lg:text-2xl">
+													{testimonial.quote}
+												</p>
+											</div>
 
 											<div className="flex flex-col items-center justify-between gap-y-6 md:flex-row">
 												<div className="flex flex-col items-center md:items-start md:space-y-1">
