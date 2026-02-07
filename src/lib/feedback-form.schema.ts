@@ -13,18 +13,16 @@ const FeedbackFormSchema = z.object({
 		.max(64, 'Maximum 64 characters')
 		.pipe(z.email())
 		.or(z.literal('')),
-	sharedBy: z.enum(['Client', 'Freelancer', 'Visitor']),
-	feedbackTitle: z.enum([
-		'Suggestion',
-		'Bug Report',
-		'Feature Request',
-		'Other'
-	]),
-	feedback: z
+	sharedBy: z.enum(['client', 'freelancer', 'visitor'], 'Select an option'),
+	feedbackType: z.enum(
+		['suggestion', 'bug report', 'feature request', 'other'],
+		'Select a feedback type'
+	),
+	message: z
 		.string()
 		.trim()
 		.min(10, 'Minimum 10 characters')
-		.max(500, 'Maximum 500 characters')
+		.max(1000, 'Maximum 1000 characters')
 })
 
 export default FeedbackFormSchema

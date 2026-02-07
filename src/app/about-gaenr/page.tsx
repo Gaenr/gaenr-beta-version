@@ -79,7 +79,7 @@ export default function Page() {
 
 			<section className="flex w-full flex-col items-center gap-y-12 px-6 sm:gap-y-16 lg:max-w-6xl">
 				<h2 className="text-[clamp(1rem,7vw,1.8rem)] font-semibold text-gray-700">
-					<p>Gaenr's Unique Offering</p>
+					Gaenr's Unique Offering
 				</h2>
 
 				<ul className="grid w-full grid-cols-1 justify-center gap-x-5 gap-y-16 sm:grid-cols-2 sm:gap-y-20 md:grid-cols-3">

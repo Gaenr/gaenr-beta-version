@@ -42,10 +42,10 @@ export default function Input({
 	classNames
 }: InputProps) {
 	return (
-		<div className={`flex flex-col gap-y-1.5 ${classNames?.base}`} key={label}>
+		<div className={`${classNames?.base} flex flex-col gap-y-1.5`} key={label}>
 			<label
 				htmlFor={label}
-				className={`text-sm font-medium ${classNames?.label} ${isRequired && 'after:ms-0.5 after:text-rose-600 after:content-["*"]'}`}>
+				className={`${classNames?.label} ${isRequired && 'after:ms-0.5 after:text-rose-600 after:content-["*"]'} text-sm font-medium`}>
 				{label}
 			</label>
 			<input
@@ -55,12 +55,12 @@ export default function Input({
 				defaultValue={defaultValue}
 				placeholder={placeholder}
 				autoComplete={label}
-				className={`${classNames?.input} bg[#f5f5f5] w-full rounded-2xl border border-gray-200 px-4 py-3 duration-300 outline-none placeholder:text-neutral-500 hover:bg-gray-200/80 focus:bg-gray-200/80`}
+				className={`${classNames?.input} rounded-2xl border border-gray-200 p-3 duration-300 outline-none placeholder:text-gray-500 hover:bg-gray-100 focus:border-gray-400`}
 				readOnly={isReadOnly}
 				disabled={isDisabled}
 				{...register}
 			/>
-			<p className="line-clamp-1 text-xs break-all text-rose-300">
+			<p className="line-clamp-1 text-xs break-all text-rose-500">
 				{errorMessage ? errorMessage : '\u00A0'}
 			</p>
 		</div>

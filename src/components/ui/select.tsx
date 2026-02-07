@@ -1,12 +1,12 @@
 'use client'
 
 import { AnimatePresence, motion } from 'framer-motion'
-import { createContext, useContext, useState } from 'react'
+import { createContext, ReactNode, useContext, useState } from 'react'
 
 import { SelectArrowIcon, TickIcon } from '@/components/icons'
 
 interface SelectProps {
-	children: React.ReactNode
+	children: ReactNode
 	label: string
 	errorMessage?: string
 	className?: string
@@ -15,12 +15,14 @@ interface SelectProps {
 	isRequired?: boolean
 	isDisabled?: boolean
 }
+
 interface SelectItemProps {
-	children: React.ReactNode
+	children: ReactNode
 	value: string
-	startContent?: React.ReactNode
+	startContent?: ReactNode
 	className?: string
 }
+
 interface SelectContext {
 	selected: string | undefined
 	handleSelection: (value: string) => void
@@ -48,27 +50,28 @@ export function Select({
 	return (
 		<selectContext.Provider value={{ selected, handleSelection }}>
 			<div
-				className={`${className} relative flex flex-col gap-y-2`}
+				className={`${className} relative flex flex-col gap-y-1.5`}
 				key={label}>
 				<label
 					htmlFor={label}
-					className={`text-sm font-medium ${isRequired && 'after:ms-0.5 after:text-rose-600 after:content-["*"]'}`}>
+					className={`${isRequired && 'after:ms-0.5 after:text-rose-600 after:content-["*"]'} text-sm font-medium`}>
 					{label}
 				</label>
 				<button
-					className={`${showDropdown && 'text-neutral-400'} flex w-full! items-center justify-between rounded-2xl border border-gray-200 px-4 py-3`}
+					type="button"
+					className={`${showDropdown && 'text-gray-500'} flex w-full! items-center justify-between rounded-2xl border border-gray-200 p-3`}
 					disabled={isDisabled}
 					onClick={() => setShowDropdown(!showDropdown)}>
 					{selected ? (
 						<span className="capitalize">{selected}</span>
 					) : (
-						<span className="text-gray-500">None selected</span>
+						<span>None selected</span>
 					)}
 					<SelectArrowIcon
 						className={` ${showDropdown ? 'rotate-180' : 'rotate-0'} duration-400`}
 					/>
 				</button>
-				<p className="line-clamp-1 text-xs break-all text-rose-300">
+				<p className="line-clamp-1 text-xs font-medium break-all text-rose-400">
 					{errorMessage ? errorMessage : '\u00A0'}
 				</p>
 
@@ -84,10 +87,8 @@ export function Select({
 								stiffness: 300,
 								duration: 0.4
 							}}
-							className="absolute top-full left-1/2 z-20 -translate-x-1/2 -translate-y-4 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-2xl">
-							<ul className="max-h-56 min-w-52 space-y-1 overflow-y-auto p-1.5">
-								{children}
-							</ul>
+							className="xyz absolute top-full left-1/2 z-20 w-full -translate-x-1/2 -translate-y-4 overflow-hidden rounded-2xl border border-gray-200 bg-white">
+							<ul className="min-w-52 p-2">{children}</ul>
 						</motion.div>
 					)}
 				</AnimatePresence>
@@ -118,7 +119,7 @@ export function SelectItem({
 
 	return (
 		<li
-			className={`${selected === value && 'bg-dark-500 font-medium'} ${className} hover:bg-dark-400 flex cursor-pointer items-center gap-x-4 rounded-xl px-3 py-1.5 text-sm text-nowrap duration-300`}
+			className={`${selected === value && 'bg-dark-500 font-medium'} ${className} flex cursor-pointer items-center gap-x-4 rounded-xl px-3 py-2 text-sm text-nowrap duration-300 hover:bg-gray-200`}
 			onClick={() => handleSelection(value)}>
 			{startContent}
 			{children}

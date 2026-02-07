@@ -1,12 +1,13 @@
 'use client'
 
-import FeedbackFormSchema from '@/lib/feedback-form.schema'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Controller, useForm } from 'react-hook-form'
 import * as z from 'zod'
-import Button from '../ui/button'
-import Input from '../ui/input'
-import { Select, SelectItem } from '../ui/select'
+
+import Button from '@/components/ui/button'
+import Input from '@/components/ui/input'
+import { Select, SelectItem } from '@/components/ui/select'
+import FeedbackFormSchema from '@/lib/feedback-form.schema'
 
 type FormData = z.infer<typeof FeedbackFormSchema>
 
@@ -21,14 +22,11 @@ export default function FeedbackForm() {
 		resolver: zodResolver(FeedbackFormSchema)
 	})
 
-	function onSubmit(data: FormData) {
-		console.log(data)
-	}
+	function onSubmit(data: FormData) {}
 
 	return (
 		<form
-			autoComplete="off"
-			className="grid w-full max-w-xl grid-cols-2 items-start gap-x-6 gap-y-2"
+			className="grid grid-cols-1 items-start gap-x-6 gap-y-3 self-stretch md:grid-cols-2"
 			onSubmit={handleSubmit(onSubmit)}>
 			<Input
 				label="Name"
@@ -62,23 +60,48 @@ export default function FeedbackForm() {
 					</Select>
 				)}
 			/>
+			<Controller
+				name="feedbackType"
+				control={control}
+				render={({ field: { value, onChange } }) => (
+					<Select
+						label="Feedback type"
+						errorMessage={errors.sharedBy?.message}
+						selected={value}
+						onChange={onChange}
+						isRequired>
+						<SelectItem value="suggestion" key="suggestion">
+							Suggestion
+						</SelectItem>
+						<SelectItem value="bug report" key="bug report">
+							Bug Report
+						</SelectItem>
+						<SelectItem value="feature request" key="feature request">
+							Feature Request
+						</SelectItem>
+						<SelectItem value="other" key="other">
+							Other
+						</SelectItem>
+					</Select>
+				)}
+			/>
 			<div className="col-span-full flex flex-col gap-y-1.5" key="feedback">
 				<label
 					htmlFor="feedback"
 					className='text-sm font-medium after:ms-0.5 after:text-rose-600 after:content-["*"]'>
-					Feedback
+					Your feedback
 				</label>
 				<textarea
 					id="feedback"
-					className="h-40 w-full resize-none rounded-2xl border border-gray-200 px-4 py-2 duration-300 outline-none placeholder:text-neutral-500 focus:border-gray-400"
-					{...register('sharedBy')}
+					className="h-50 w-full resize-none rounded-2xl border border-gray-200 p-3 duration-300 outline-none placeholder:text-gray-500 hover:bg-gray-100 focus:border-gray-400"
+					{...register('message')}
 				/>
-				<p className="line-clamp-1 text-xs break-all text-rose-300">
-					{errors.feedback?.message ? errors.feedback?.message : '\u00A0'}
+				<p className="line-clamp-1 text-xs font-medium break-all text-rose-400">
+					{errors.message?.message ? errors.message?.message : '\u00A0'}
 				</p>
 			</div>
 
-			<Button color="primary" radius="lg">
+			<Button color="primary" radius="lg" className="col-span-full mx-auto">
 				Submit
 			</Button>
 		</form>
