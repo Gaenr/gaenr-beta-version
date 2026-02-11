@@ -115,8 +115,11 @@ export default function Page() {
 											<button
 												className="absolute bottom-8 left-1/2 flex w-[75%] -translate-x-1/2 cursor-pointer items-center justify-between rounded-full border-2 border-white/10 bg-white/20 px-5 py-3 text-center text-sm font-medium text-nowrap text-white saturate-150 backdrop-blur-lg duration-200 hover:bg-white/35"
 												onClick={() => setShowModal(true)}>
-												Watch Testimonial
-												<PlayIcon className="size-5 rounded-full p-1 ring ring-offset-1" />
+												<p>
+													<span className="md:hidden lg:inline">Watch</span>
+													&nbsp;Testimonial
+												</p>
+												<PlayIcon className="size-5 shrink-0 rounded-full p-1 ring ring-offset-1" />
 											</button>
 										</div>
 
@@ -223,7 +226,7 @@ export default function Page() {
 								title="YouTube video player"
 								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 								referrerPolicy="strict-origin-when-cross-origin"
-								className="aspect-video"
+								className="block aspect-video w-full"
 								allowFullScreen
 							/>
 						</div>
