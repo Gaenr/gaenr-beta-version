@@ -6,20 +6,17 @@ import Breadcrumbs from '@/components/ui/breadcrumbs'
 export default function Page() {
 	return (
 		<main className="flex flex-col items-center gap-y-12 pb-12 lg:pb-24">
-			<section className="bg-primary flex w-full flex-col items-center justify-center gap-y-6 bg-[url('/hero-2.png')] bg-cover bg-center bg-no-repeat py-12">
+			<section className="bg-primary flex w-full flex-col items-center justify-center gap-y-7 bg-[url('/hero-2.png')] bg-cover bg-center bg-no-repeat py-12">
 				<Breadcrumbs href="feedback" title="Feedback" />
 
-				<article className="flex w-full max-w-xl flex-col items-center gap-y-4 px-6">
-					<h1 className="text-3xl font-semibold text-white">
-						Your voice shapes Gaenr
-					</h1>
+				<article className="flex w-full max-w-xl flex-col items-center gap-y-4 px-6 sm:gap-y-6">
+					<h1 className="text-3xl font-semibold text-white">Title / Header</h1>
 					<p className="hidden text-center text-white sm:block">
-						If you’ve noticed something we could improve or have an idea to make
-						the platform better, share it here. We read every message.
+						Lorem ipsum dolor sit amet consectetur adipisicing elit Quos eanon
+						doloremque quod alias voluptatibus voluptates
 					</p>
 				</article>
 			</section>
-
 			<section className="flex flex-col items-center justify-center gap-x-12 gap-y-6 px-6 sm:flex-row">
 				<FeedbackIcon className="w-full max-w-xs shrink-0 sm:size-60" />
 
