@@ -17,6 +17,7 @@ export default function Page() {
 					</p>
 				</article>
 			</section>
+
 			<section className="flex flex-col items-center justify-center gap-x-12 gap-y-6 px-6 sm:flex-row">
 				<FeedbackIcon className="w-full max-w-xs shrink-0 sm:size-60" />
 

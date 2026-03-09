@@ -223,7 +223,7 @@ export default function Page() {
 							onClick={(e) => e.stopPropagation()}>
 							<iframe
 								src={TESTIMONIALS[index].videoSrc}
-								title="YouTube video player"
+								title="Gaenr Testimonial Video"
 								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 								referrerPolicy="strict-origin-when-cross-origin"
 								className="block aspect-video w-full"

@@ -96,7 +96,7 @@ export default function Page() {
 					<MiniLink href="/services">Let's explore</MiniLink>
 				</section>
 
-				<div className="space-y-16 bg-[url('/xyz.svg')] bg-cover bg-no-repeat py-16 md:py-24">
+				<div className="w-full bg-[url('/xyz.svg')] bg-cover bg-no-repeat py-16 md:py-24">
 					<section className="lg:max-w-8xl mx-auto grid w-full max-w-3xl grid-cols-1 items-center gap-y-16 px-6 lg:grid-cols-2 lg:gap-x-24">
 						<div className="">left content</div>
 
