@@ -32,7 +32,7 @@ export default function Page() {
 						<PhoneIcon className="text-white" />
 						<p className="font-medium text-white">Phone</p>
 					</div>
-					<p className="mt-5 mb-8 text-sm text-gray-500">
+					<p className="my-5 text-sm text-gray-500 md:mb-8">
 						For general inquiries, please call us at our main phone number.
 					</p>
 					<p className="font-medium">+09639116987</p>

@@ -205,7 +205,7 @@ export default function Page() {
 
 						<div className="pointer-events-none absolute inset-0 size-full opacity-25">
 							<Image
-								src="/svgs/wallpaper.svg"
+								src="iphone-wallpaper.svg"
 								alt="wallpaper"
 								className="scale-350"
 								fill

@@ -133,35 +133,34 @@ export default function Page() {
 			</section>
 
 			<section className="mx-auto grid w-max grid-cols-1 gap-4 md:grid-cols-2">
-				<h3 className="col-span-full mb-4 flex items-center justify-center gap-x-2.5 text-[clamp(1rem,7vw,1.8rem)] font-semibold text-gray-700 sm:flex-row sm:text-3xl md:mb-8">
-					<p className="text-primary-dark">Trust</p>
-					<p>Gaenr</p>
-				</h3>
-
+				<h2 className="col-span-full mb-4 flex justify-center gap-x-2 text-2xl font-semibold text-gray-700 sm:gap-y-2 sm:text-3xl md:mb-8">
+					<p>Trust</p>
+					<p className="text-primary-dark">Gaenr</p>
+				</h2>
 				<div className="group flex items-center gap-x-6 md:ml-auto md:flex-row-reverse md:gap-x-8">
-					<div className="bg-primary group border-primary flex size-16 items-center justify-center rounded-2xl border-3 duration-300 ease-in group-hover:bg-white group-hover:shadow-none md:size-18 md:rounded-full md:rounded-br-none">
-						<VerifiedIcon className="group-hover:text-primary size-7 text-white duration-300 ease-in md:translate-1" />
+					<div className="bg-primary group border-primary flex size-14 items-center justify-center rounded-2xl border-3 duration-300 ease-in group-hover:bg-white group-hover:shadow-none md:size-18 md:rounded-full md:rounded-br-none">
+						<VerifiedIcon className="group-hover:text-primary size-6 text-white duration-300 ease-in md:translate-1" />
 					</div>
 					<p className="text-lg font-medium">Verified Experts</p>
 				</div>
 
 				<div className="group flex items-center gap-x-6 md:gap-x-8">
-					<div className="bg-primary group border-primary flex size-16 items-center justify-center rounded-2xl border-3 duration-300 ease-in group-hover:bg-white group-hover:shadow-none md:size-18 md:rounded-full md:rounded-bl-none">
-						<WorkflowIcon className="group-hover:text-primary size-7 text-white duration-300 ease-in md:-translate-x-1 md:translate-y-1" />
+					<div className="bg-primary group border-primary flex size-14 items-center justify-center rounded-2xl border-3 duration-300 ease-in group-hover:bg-white group-hover:shadow-none md:size-18 md:rounded-full md:rounded-bl-none">
+						<WorkflowIcon className="group-hover:text-primary size-6 text-white duration-300 ease-in md:-translate-x-1 md:translate-y-1" />
 					</div>
 					<p className="text-lg font-medium">Managed Workflow</p>
 				</div>
 
 				<div className="group flex items-center gap-x-6 md:ml-auto md:flex-row-reverse md:gap-x-8">
-					<div className="bg-primary group border-primary flex size-16 items-center justify-center rounded-2xl border-3 duration-300 ease-in group-hover:bg-white group-hover:shadow-none md:size-18 md:rounded-full md:rounded-tr-none">
-						<SecurePaymentIcon className="group-hover:text-primary size-7 text-white duration-300 ease-in md:translate-x-1 md:-translate-y-1" />
+					<div className="bg-primary group border-primary flex size-14 items-center justify-center rounded-2xl border-3 duration-300 ease-in group-hover:bg-white group-hover:shadow-none md:size-18 md:rounded-full md:rounded-tr-none">
+						<SecurePaymentIcon className="group-hover:text-primary size-6 text-white duration-300 ease-in md:translate-x-1 md:-translate-y-1" />
 					</div>
 					<p className="text-lg font-medium">Secure Payments</p>
 				</div>
 
 				<div className="group flex items-center gap-x-6 md:gap-x-8">
-					<div className="bg-primary group border-primary flex size-16 items-center justify-center rounded-2xl border-3 duration-300 ease-in group-hover:bg-white group-hover:shadow-none md:size-18 md:rounded-full md:rounded-tl-none">
-						<NoFeeIcon className="group-hover:text-primary size-7 text-white duration-300 ease-in md:-translate-1" />
+					<div className="bg-primary group border-primary flex size-14 items-center justify-center rounded-2xl border-3 duration-300 ease-in group-hover:bg-white group-hover:shadow-none md:size-18 md:rounded-full md:rounded-tl-none">
+						<NoFeeIcon className="group-hover:text-primary size-6 text-white duration-300 ease-in md:-translate-1" />
 					</div>
 					<p className="text-lg font-medium">No Platform Fee</p>
 				</div>

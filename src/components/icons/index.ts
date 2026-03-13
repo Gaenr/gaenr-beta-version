@@ -1,5 +1,6 @@
 export { ArrowIcon } from './arrow'
 export { BadgeCheckIcon } from './badge-check'
+export { BriefcaseIcon } from './briefcase'
 export { CheckSquareIcon } from './check-square'
 export { CloseIcon } from './close'
 export { CommunityIcon } from './community'
