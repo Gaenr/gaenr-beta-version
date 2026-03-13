@@ -1,3 +1,4 @@
+import Review from '@/components/features/review'
 import { ShortArrowIcon, StarFillIcon } from '@/components/icons'
 import { HomeIcon } from '@/components/icons/home'
 import Image from 'next/image'
@@ -91,8 +92,105 @@ export default function Page() {
 				</div>
 			</section>
 
-			<section className="max-w-8xl w-full mx-auto my-24 px-6">
-				<h2 className="text-xl font-semibold text-blue-950">Portfolio</h2>
+			<section className="max-w-8xl mx-auto my-6 grid w-full grid-cols-[repeat(auto-fill,minmax(14rem,1fr))] gap-7 px-6">
+				<h2 className="col-span-full text-xl font-semibold text-blue-950">
+					Portfolio
+				</h2>
+
+				<div className="relative h-full w-full overflow-hidden rounded-3xl border border-slate-200 bg-white p-1.5">
+					<div className="relative aspect-3/2 overflow-hidden rounded-2xl">
+						<Image
+							src="/services-examples/1.jpg"
+							alt="Portfolio 1"
+							className="object-cover"
+							fill
+						/>
+					</div>
+					<div className="space-y-2 px-4 py-5">
+						<h3 className="text-lg font-semibold">Artwork title</h3>
+						<p className="text-sm font-medium text-gray-500">
+							Description of the project goes here. It can be a brief overview
+						</p>
+					</div>
+				</div>
+				<div className="relative h-full w-full overflow-hidden rounded-3xl border border-slate-200 bg-white p-1.5">
+					<div className="relative aspect-3/2 overflow-hidden rounded-2xl">
+						<Image
+							src="/services-examples/2.jpg"
+							alt="Portfolio 1"
+							className="object-cover"
+							fill
+						/>
+					</div>
+					<div className="space-y-2 px-4 py-5">
+						<h3 className="text-lg font-semibold">Artwork title</h3>
+						<p className="text-sm font-medium text-gray-500">
+							Description of the project goes here. It can be a brief overview
+						</p>
+					</div>
+				</div>
+				<div className="relative h-full w-full overflow-hidden rounded-3xl border border-slate-200 bg-white p-1.5">
+					<div className="relative aspect-3/2 overflow-hidden rounded-2xl">
+						<Image
+							src="/services-examples/3.jpg"
+							alt="Portfolio 1"
+							className="object-cover"
+							fill
+						/>
+					</div>
+					<div className="space-y-2 px-4 py-5">
+						<h3 className="text-lg font-semibold">Artwork title</h3>
+						<p className="text-sm font-medium text-gray-500">
+							Description of the project goes here. It can be a brief overview
+						</p>
+					</div>
+				</div>
+				<div className="relative h-full w-full overflow-hidden rounded-3xl border border-slate-200 bg-white p-1.5">
+					<div className="relative aspect-3/2 overflow-hidden rounded-2xl">
+						<Image
+							src="/services-examples/4.jpg"
+							alt="Portfolio 1"
+							className="object-cover"
+							fill
+						/>
+					</div>
+					<div className="space-y-2 px-4 py-5">
+						<h3 className="text-lg font-semibold">Artwork title</h3>
+						<p className="text-sm font-medium text-gray-500">
+							Description of the project goes here. It can be a brief overview
+						</p>
+					</div>
+				</div>
+				<div className="relative h-full w-full overflow-hidden rounded-3xl border border-slate-200 bg-white p-1.5">
+					<div className="relative aspect-3/2 overflow-hidden rounded-2xl">
+						<Image
+							src="/services-examples/5.jpg"
+							alt="Portfolio 1"
+							className="object-cover"
+							fill
+						/>
+					</div>
+					<div className="space-y-2 px-4 py-5">
+						<h3 className="text-lg font-semibold">Artwork title</h3>
+						<p className="text-sm font-medium text-gray-500">
+							Description of the project goes here. It can be a brief overview
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section className="max-w-8xl mx-auto my-6 w-full space-y-8 px-6">
+				<h2 className="col-span-full text-xl font-semibold text-blue-950">
+					Reviews <span className="text-lg">(39)</span>
+				</h2>
+
+				<Review />
+				<Review />
+				<Review />
+
+				<button className="h-11 rounded-full border border-gray-200 px-6 font-medium text-gray-600 duration-300 hover:bg-gray-200 active:bg-gray-300">
+					Load more
+				</button>
 			</section>
 		</main>
 	)

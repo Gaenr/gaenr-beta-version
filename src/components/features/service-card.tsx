@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { useRef, useState } from 'react'
+import { MouseEvent, useRef, useState } from 'react'
 
 import Button from '@/components/ui/button'
 import {
@@ -36,14 +36,17 @@ export default function ServiceCard({
 	const smoothX = useSpring(x, { stiffness: 60, damping: 15 })
 	const smoothY = useSpring(y, { stiffness: 60, damping: 15 })
 
-	function handleMouseMove(e: React.MouseEvent<HTMLDivElement>) {
+	const canHover =
+		typeof window !== 'undefined' && window.matchMedia('(hover: hover)').matches
+
+	function handleMouseMove(e: MouseEvent<HTMLDivElement>) {
 		if (!ref.current) return
 
 		// This gets the card’s position and size on the screen.
 		const rect = ref.current.getBoundingClientRect()
 
 		const centerX = rect.left + rect.width / 2 || 0
-		const centerY = rect.top + rect.height / 2 || 0
+		const centerY = rect.top + rect.height / 2 || 1
 
 		const deltaX = e.clientX - centerX
 		const deltaY = e.clientY - centerY
@@ -62,12 +65,16 @@ export default function ServiceCard({
 			<motion.div
 				className="relative h-full w-full overflow-hidden rounded-3xl border border-slate-200 bg-white p-1.5"
 				ref={ref}
-				onMouseEnter={() => setShow(true)}
-				onMouseMove={handleMouseMove}
-				onMouseLeave={() => {
-					setShow(false)
-					handleMouseLeave()
-				}}
+				onMouseEnter={canHover ? () => setShow(true) : undefined}
+				onMouseMove={canHover ? handleMouseMove : undefined}
+				onMouseLeave={
+					canHover
+						? () => {
+								setShow(false)
+								handleMouseLeave()
+							}
+						: undefined
+				}
 				style={{
 					x: smoothX,
 					y: smoothY
