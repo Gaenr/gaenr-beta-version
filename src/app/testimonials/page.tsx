@@ -12,7 +12,6 @@ import {
 	QuoteIcon,
 	ShortArrowIcon
 } from '@/components/icons'
-import Breadcrumbs from '@/components/ui/breadcrumbs'
 
 const TESTIMONIALS = [
 	{
@@ -64,7 +63,7 @@ export default function Page() {
 		<>
 			<main className="flex flex-col items-center gap-y-12 pb-12 lg:gap-y-24 lg:pb-24">
 				<section className="bg-primary flex w-full flex-col items-center justify-center gap-y-7 bg-[url('/hero-2.png')] bg-cover bg-center bg-no-repeat py-12">
-					<Breadcrumbs href="testimonials" title="Testimonials" />
+					{/* <Breadcrumbs href="testimonials" title="Testimonials" /> */}
 
 					<article className="flex w-full max-w-xl flex-col items-center gap-y-4 px-6 sm:gap-y-6">
 						<h1 className="text-3xl font-semibold text-white">
