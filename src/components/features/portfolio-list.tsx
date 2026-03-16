@@ -88,9 +88,8 @@ export default function PortfolioList({ expertId }: { expertId: string }) {
 							<Image
 								src="/big-portfolio.jpg"
 								alt=""
-								width={800}
-								height={600}
-								className="size-full"
+								width={1920}
+								height={1080}
 							/>
 						</section>
 

@@ -18,7 +18,7 @@ export default async function Page({
 	const { id } = await params
 
 	return (
-		<main className="main flex flex-col py-12">
+		<main className="py-12">
 			<Breadcrumbs classNames={{ base: 'max-w-8xl mx-auto w-full px-6' }}>
 				<BreadcrumbItem
 					href="/"
