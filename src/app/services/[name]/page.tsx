@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -6,6 +7,10 @@ import { CheckIcon } from '@/components/icons/check'
 import { BreadcrumbItem, Breadcrumbs } from '@/components/ui/breadcrumbs'
 import MiniLink from '@/components/ui/mini-link'
 
+export const metadata: Metadata = {
+	title: 'Graphics Design Service'
+}
+
 export default function Page() {
 	return (
 		<main>
@@ -13,7 +18,9 @@ export default function Page() {
 				<Breadcrumbs color="white">
 					<BreadcrumbItem
 						href="/"
-						startContent={<HomeIcon className="size-4.5 -translate-y-px" />}>
+						startContent={
+							<HomeIcon className="mr-1 size-4.5 -translate-y-px" />
+						}>
 						Home
 					</BreadcrumbItem>
 					<BreadcrumbItem href="/services">Services</BreadcrumbItem>

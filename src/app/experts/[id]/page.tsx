@@ -22,7 +22,7 @@ export default async function Page({
 			<Breadcrumbs classNames={{ base: 'max-w-8xl mx-auto w-full px-6' }}>
 				<BreadcrumbItem
 					href="/"
-					startContent={<HomeIcon className="size-4.5 -translate-y-px" />}>
+					startContent={<HomeIcon className="mr-1 size-4.5 -translate-y-px" />}>
 					Home
 				</BreadcrumbItem>
 				<BreadcrumbItem href="/experts">Experts</BreadcrumbItem>

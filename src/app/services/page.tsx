@@ -22,7 +22,9 @@ export default function Page() {
 				<Breadcrumbs color="white">
 					<BreadcrumbItem
 						href="/"
-						startContent={<HomeIcon className="size-4.5 -translate-y-px" />}>
+						startContent={
+							<HomeIcon className="mr-1 size-4.5 -translate-y-px" />
+						}>
 						Home
 					</BreadcrumbItem>
 					<BreadcrumbItem href="/services">Services</BreadcrumbItem>
@@ -128,7 +130,7 @@ export default function Page() {
 			</section>
 
 			<section className="mx-auto w-max space-y-9 sm:space-y-10">
-				<h2 className="text-center text-2xl font-semibold sm:text-2xl">
+				<h2 className="text-center text-2xl font-semibold">
 					<span className="text-blue-950">Trust</span>&nbsp;
 					<span className="text-primary-dark">Gaenr</span>
 				</h2>
