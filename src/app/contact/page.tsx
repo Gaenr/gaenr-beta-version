@@ -1,7 +1,9 @@
+import { Metadata } from 'next'
 import Link from 'next/link'
 
 import {
 	FacebookIcon,
+	HomeIcon,
 	InstagramIcon,
 	LinkedinIcon,
 	LocationIcon,
@@ -9,19 +11,32 @@ import {
 	PhoneIcon,
 	XIcon
 } from '@/components/icons'
-import Breadcrumbs from '@/components/ui/breadcrumbs'
+import { BreadcrumbItem, Breadcrumbs } from '@/components/ui/breadcrumbs'
+
+export const metadata: Metadata = {
+	title: 'Contact Us'
+}
 
 export default function Page() {
 	return (
-		<main className="flex flex-col items-center gap-y-12 pb-12 md:gap-y-20">
-			<section className="bg-primary flex w-full flex-col items-center justify-center gap-y-7 bg-[url('/hero-2.png')] bg-cover bg-center bg-no-repeat py-12">
-				<Breadcrumbs href="contact" title="Contact" />
+		<main className="flex flex-col items-center gap-y-12 pt-0 pb-12 md:gap-y-16 md:pb-16">
+			<section className="bg-primary flex w-full flex-col items-center justify-center gap-y-7 bg-[url('/hero-2.png')] bg-cover bg-center bg-no-repeat py-10 sm:py-12">
+				<Breadcrumbs color="white">
+					<BreadcrumbItem
+						href="/"
+						startContent={
+							<HomeIcon className="mr-1 size-4.5 -translate-y-px" />
+						}>
+						Home
+					</BreadcrumbItem>
+					<BreadcrumbItem href="/contact">Contact</BreadcrumbItem>
+				</Breadcrumbs>
 
 				<article className="flex w-full max-w-xl flex-col items-center gap-y-4 px-6 sm:gap-y-6">
-					<h1 className="text-3xl font-semibold text-white">Title / Header</h1>
+					<h1 className="text-3xl font-medium text-white">Contact Us</h1>
 					<p className="hidden text-center text-white sm:block">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit Quos eanon
-						doloremque quod alias voluptatibus voluptates
+						Have questions or need assistance? Reach out to us through any of
+						the following channels, and our team will be happy to help you.
 					</p>
 				</article>
 			</section>
@@ -59,32 +74,32 @@ export default function Page() {
 						media channels.
 					</p>
 
-					<ul className="flex items-center gap-x-6 md:row-start-2 md:place-self-start">
+					<ul className="flex items-center gap-x-6">
 						<li>
 							<Link
 								href="#"
-								className={`flex size-7 items-center justify-center rounded-xl border border-slate-200 text-sm text-gray-500 duration-200 hover:text-gray-700 active:text-gray-700`}>
+								className="flex size-7 items-center justify-center rounded-xl border border-gray-300 text-gray-500 duration-200 hover:text-gray-700 active:text-gray-700">
 								<FacebookIcon className="h-4 w-auto" />
 							</Link>
 						</li>
 						<li>
 							<Link
 								href="#"
-								className={`flex size-7 items-center justify-center rounded-xl border border-slate-200 text-sm text-gray-500 duration-200 hover:text-gray-700 active:text-gray-700`}>
+								className="flex size-7 items-center justify-center rounded-xl border border-gray-300 text-gray-500 duration-200 hover:text-gray-700 active:text-gray-700">
 								<InstagramIcon className="h-4 w-auto" />
 							</Link>
 						</li>
 						<li>
 							<Link
 								href="#"
-								className={`flex size-7 items-center justify-center rounded-xl border border-slate-200 text-sm text-gray-500 duration-200 hover:text-gray-700 active:text-gray-700`}>
+								className="flex size-7 items-center justify-center rounded-xl border border-gray-300 text-gray-500 duration-200 hover:text-gray-700 active:text-gray-700">
 								<LinkedinIcon className="h-4 w-auto" />
 							</Link>
 						</li>
 						<li>
 							<Link
 								href="#"
-								className={`flex size-7 items-center justify-center rounded-xl border border-slate-200 text-sm text-gray-500 duration-200 hover:text-gray-700 active:text-gray-700`}>
+								className="flex size-7 items-center justify-center rounded-xl border border-gray-300 text-gray-500 duration-200 hover:text-gray-700 active:text-gray-700">
 								<XIcon className="h-3 w-auto" />
 							</Link>
 						</li>
@@ -104,7 +119,8 @@ export default function Page() {
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.5550386536584!2d90.39090203415243!3d23.72757889444877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8c2c452899b%3A0x69785a7d402ef96a!2sP9HR%2B6R8%20BUET%20Campus%2C%20Dhaka%201000!5e0!3m2!1sen!2sbd!4v1770309034828!5m2!1sen!2sbd"
 					loading="lazy"
 					className="h-[50dvh] w-dvw bg-gray-200"
-					allowFullScreen></iframe>
+					allowFullScreen
+				/>
 			</section>
 		</main>
 	)

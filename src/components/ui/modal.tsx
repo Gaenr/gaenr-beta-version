@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion'
-import { ReactNode } from 'react'
+import { ReactNode, useEffect } from 'react'
 
 export default function Modal({
 	children,
@@ -10,6 +10,17 @@ export default function Modal({
 	isOpen: boolean
 	onOpenChange: (isOpen: boolean) => void
 }) {
+	useEffect(() => {
+		if (!isOpen) return
+
+		const defaultOverflow = document.body.style.overflow
+		document.body.style.overflow = 'hidden'
+
+		return () => {
+			document.body.style.overflow = defaultOverflow
+		}
+	}, [isOpen])
+
 	return (
 		<AnimatePresence>
 			{isOpen && (
