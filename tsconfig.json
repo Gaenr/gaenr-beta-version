@@ -1,8 +1,10 @@
 {
 	"compilerOptions": {
-		"target": "ES2017",
+		"target": "esnext",
 		"lib": ["dom", "dom.iterable", "esnext"],
 		"allowJs": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
 		"skipLibCheck": true,
 		"strict": true,
 		"noEmit": true,
@@ -30,5 +32,5 @@
 		".next/dev/types/**/*.ts",
 		"src/utils/useModal.tss"
 	],
-	"exclude": ["node_modules"]
+	"exclude": ["node_modules", ".next"]
 }

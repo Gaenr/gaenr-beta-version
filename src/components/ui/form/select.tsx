@@ -50,7 +50,7 @@ export function Select({
 	return (
 		<selectContext.Provider value={{ selected, handleSelection }}>
 			<div
-				className={`${className} relative flex flex-col gap-y-1.5`}
+				className={`${className} relative flex flex-col gap-y-2`}
 				key={label}>
 				<label
 					htmlFor={label}
@@ -59,7 +59,7 @@ export function Select({
 				</label>
 				<button
 					type="button"
-					className={`${showDropdown && 'text-gray-500'} flex w-full! items-center justify-between rounded-2xl border border-gray-200 p-3`}
+					className={`${showDropdown && 'text-gray-500'} flex w-full! items-center justify-between rounded-2xl border border-gray-200 p-3 duration-300 hover:bg-gray-100`}
 					disabled={isDisabled}
 					onClick={() => setShowDropdown(!showDropdown)}>
 					{selected ? (
@@ -71,7 +71,7 @@ export function Select({
 						className={` ${showDropdown ? 'rotate-180' : 'rotate-0'} duration-400`}
 					/>
 				</button>
-				<p className="line-clamp-1 text-xs font-medium break-all text-rose-400">
+				<p className="line-clamp-1 text-xs font-medium break-all text-rose-500">
 					{errorMessage ? errorMessage : '\u00A0'}
 				</p>
 
@@ -87,8 +87,8 @@ export function Select({
 								stiffness: 300,
 								duration: 0.4
 							}}
-							className="xyz absolute top-full left-1/2 z-20 w-full -translate-x-1/2 -translate-y-4 overflow-hidden rounded-2xl border border-gray-200 bg-white">
-							<ul className="min-w-52 p-2">{children}</ul>
+							className="shadow-card absolute top-full left-0 z-20 w-full -translate-y-4 overflow-hidden rounded-2xl bg-white">
+							<ul className="p-2">{children}</ul>
 						</motion.div>
 					)}
 				</AnimatePresence>
@@ -119,7 +119,7 @@ export function SelectItem({
 
 	return (
 		<li
-			className={`${selected === value && 'bg-dark-500 font-medium'} ${className} flex cursor-pointer items-center gap-x-4 rounded-xl px-3 py-2 text-sm text-nowrap duration-300 hover:bg-gray-200`}
+			className={`${className} flex cursor-pointer items-center gap-x-4 rounded-xl px-3 py-2 text-sm text-nowrap duration-300 hover:bg-gray-200`}
 			onClick={() => handleSelection(value)}>
 			{startContent}
 			{children}

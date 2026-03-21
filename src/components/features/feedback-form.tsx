@@ -2,11 +2,14 @@
 
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Controller, useForm } from 'react-hook-form'
+import toast from 'react-hot-toast'
 import * as z from 'zod'
 
 import Button from '@/components/ui/button'
-import Input from '@/components/ui/input'
-import { Select, SelectItem } from '@/components/ui/select'
+import Input from '@/components/ui/form/input'
+import { Select, SelectItem } from '@/components/ui/form/select'
+import Textarea from '@/components/ui/form/textarea'
+import { submitFeedback } from '@/lib/action'
 import FeedbackFormSchema from '@/lib/feedback-form.schema'
 
 type FormData = z.infer<typeof FeedbackFormSchema>
@@ -16,17 +19,24 @@ export default function FeedbackForm() {
 		register,
 		handleSubmit,
 		control,
-		reset,
-		formState: { errors }
+		formState: { errors },
+		reset
 	} = useForm<FormData>({
 		resolver: zodResolver(FeedbackFormSchema)
 	})
 
-	function onSubmit(data: FormData) {}
+	async function onSubmit(data: FormData) {
+		const { success, message } = await submitFeedback(data)
+
+		if (success) toast.success(message)
+		else toast.error(message)
+
+		reset()
+	}
 
 	return (
 		<form
-			className="grid grid-cols-1 items-start gap-x-6 gap-y-3 self-stretch md:grid-cols-2"
+			className="grid grid-cols-1 items-start gap-x-6 gap-y-3 md:grid-cols-2"
 			onSubmit={handleSubmit(onSubmit)}>
 			<Input
 				label="Name"
@@ -85,23 +95,16 @@ export default function FeedbackForm() {
 					</Select>
 				)}
 			/>
-			<div className="col-span-full flex flex-col gap-y-1.5" key="feedback">
-				<label
-					htmlFor="feedback"
-					className='text-sm font-medium after:ms-0.5 after:text-rose-600 after:content-["*"]'>
-					Your feedback
-				</label>
-				<textarea
-					id="feedback"
-					className="h-50 w-full resize-none rounded-2xl border border-gray-200 p-3 duration-300 outline-none placeholder:text-gray-500 hover:bg-gray-100 focus:border-gray-400"
-					{...register('message')}
-				/>
-				<p className="line-clamp-1 text-xs font-medium break-all text-rose-400">
-					{errors.message?.message ? errors.message?.message : '\u00A0'}
-				</p>
-			</div>
+			<Textarea
+				id="feedback"
+				label="Your feedback"
+				classNames={{ base: 'col-span-full' }}
+				register={register('message')}
+				errorMessage={errors.message?.message}
+				isRequired
+			/>
 
-			<Button color="primary" radius="lg" className="col-span-full mx-auto">
+			<Button color="primary" className="col-span-full mx-auto">
 				Submit
 			</Button>
 		</form>

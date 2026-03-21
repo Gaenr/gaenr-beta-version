@@ -1,3 +1,4 @@
+export { AlertIcon } from './alert'
 export { ArrowIcon } from './arrow'
 export { BadgeCheckIcon } from './badge-check'
 export { BriefcaseIcon } from './briefcase'

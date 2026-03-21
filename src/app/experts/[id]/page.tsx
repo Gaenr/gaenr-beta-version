@@ -45,7 +45,7 @@ export default async function Page({
 					<div className="space-y-6">
 						<div className="flex flex-col items-center gap-y-5 sm:flex-row sm:justify-between">
 							<div className="flex flex-col items-center sm:items-start">
-								<h1 className="text-2xl font-medium">Tasfin Hasan</h1>
+								<h1 className="font-medIum text-2xl">Tasfin Hasan</h1>
 								<p className="text-sm font-medium text-gray-500">
 									Graphics Designer
 								</p>

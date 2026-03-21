@@ -110,16 +110,16 @@ export default function TestimonialsSection() {
 									<div className="flex flex-col justify-between gap-y-8 md:my-10">
 										<div className="relative">
 											<QuoteIcon className="absolute top-0 left-0 -z-10 size-10 translate-x-1/3 -translate-y-1/3 sm:size-12" />
-											<p className="text-center text-xl md:text-start md:text-2xl">
+											<h2 className="text-center text-xl font-medium md:text-start md:text-2xl">
 												{testimonial.quote}
-											</p>
+											</h2>
 										</div>
 
 										<div className="flex flex-col items-center justify-between gap-y-6 md:flex-row">
 											<div className="flex flex-col items-center md:items-start md:space-y-1">
-												<p className="text-lg font-semibold md:text-xl">
+												<h3 className="text-lg font-medium md:text-xl">
 													{testimonial.name}
-												</p>
+												</h3>
 												<p className="text-sm font-medium text-gray-500">
 													{testimonial.jobTitle}
 												</p>
