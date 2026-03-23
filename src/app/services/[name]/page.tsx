@@ -114,7 +114,7 @@ export default function Page() {
 
 			<section className="mx-auto my-12 w-full max-w-5xl space-y-8 px-6 lg:my-16 lg:space-y-10">
 				<h2 className="text-center text-2xl font-semibold text-blue-950">
-					<p>Service pricing</p>
+					Service pricing
 				</h2>
 
 				<ul className="grid grid-cols-1 place-items-center gap-x-4 gap-y-9 lg:grid-cols-3 lg:place-items-stretch">

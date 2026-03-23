@@ -14,7 +14,7 @@ import FeedbackFormSchema from '@/lib/feedback-form.schema'
 
 type FormData = z.infer<typeof FeedbackFormSchema>
 
-export default function FeedbackForm() {
+export default function AssignTaskForm() {
 	const {
 		register,
 		handleSubmit,
@@ -48,6 +48,7 @@ export default function FeedbackForm() {
 				register={register('email')}
 				errorMessage={errors.email?.message}
 			/>
+
 			<Controller
 				name="sharedBy"
 				control={control}

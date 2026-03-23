@@ -5,9 +5,12 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 
+import AssignTaskForm from '@/components/features/assign-task-form'
 import { CloseIcon, MenuIcon } from '@/components/icons'
 import Button from '@/components/ui/button'
 import { Logo } from '@/components/ui/logo'
+import Modal from '@/components/ui/modal'
+import UseModal from '@/hooks/useModal'
 
 const navLinks = [
 	{
@@ -35,6 +38,8 @@ const navLinks = [
 export default function NavBar() {
 	const pathname = usePathname()
 	const [showMenu, setShowMenu] = useState(false)
+
+	const { isOpen, onOpen, onOpenChange } = UseModal()
 
 	return (
 		<>
@@ -107,9 +112,9 @@ export default function NavBar() {
 							</li>
 						))}
 						<li>
-							<Link href="/assign-task">
-								<Button color="primary">Assign Task</Button>
-							</Link>
+							<Button color="primary" onClick={onOpen}>
+								Assign Task
+							</Button>
 						</li>
 					</ul>
 				</div>
@@ -150,6 +155,25 @@ export default function NavBar() {
 					</motion.div>
 				)}
 			</AnimatePresence>
+
+			<Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+				{() => (
+					<main className="no-scrollbar block max-h-[80dvh] w-[85dvw] space-y-10 overflow-y-auto rounded-4xl bg-white p-6 sm:p-8 md:w-2xl lg:w-3xl">
+						<article className="flex flex-col items-center gap-y-2 px-6">
+							<Logo className="mx-auto mb-3 size-11" />
+							<h2 className="text-primary-dark text-2xl font-semibold sm:text-xl">
+								Assign Task
+							</h2>
+							<p className="text-center">
+								Please share accurate information so we can deliver exactly what
+								you expect.
+							</p>
+						</article>
+
+						<AssignTaskForm />
+					</main>
+				)}
+			</Modal>
 		</>
 	)
 }

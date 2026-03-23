@@ -4,8 +4,6 @@ import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
 import { useState } from 'react'
 
-const MAX_INDEX = 5
-
 export default function PortfolioItem({
 	imageSrc,
 	handleOpen
