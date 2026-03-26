@@ -29,8 +29,8 @@ export default function Iphone() {
 					damping: 15
 				}
 			}}
-			className="absolute top-1/4 left-1/2 z-20 -translate-x-1/2 backface-hidden perspective-[800px] transform-3d">
-			<div className="rounded-2xl-plus grid grid-cols-[auto_9rem_auto] items-center gap-x-3 border border-slate-200/30 bg-white/70 p-2.5 shadow-sm saturate-150 backdrop-blur-xl md:grid-cols-[auto_8rem_auto]">
+			className="absolute top-1/4 left-1/2 z-20 -translate-x-1/2 backface-hidden perspective-midrange transform-3d">
+			<div className="rounded-2xl-plus grid grid-cols-[auto_9rem_auto] items-center gap-x-3 border border-gray-200/30 bg-white/70 p-2.5 shadow-sm saturate-150 backdrop-blur-xl md:grid-cols-[auto_8rem_auto]">
 				<div className="flex size-11 items-center justify-center rounded-xl bg-white">
 					<MessageIcon className="text-primary size-7" />
 				</div>

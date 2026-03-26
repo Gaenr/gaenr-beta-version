@@ -6,8 +6,9 @@ import { createContext, ReactNode, useContext, useState } from 'react'
 import { SelectArrowIcon, TickIcon } from '@/components/icons'
 
 interface SelectProps {
-	children: ReactNode
+	children: (options: () => { label: string; value: string }[]) => ReactNode
 	label: string
+	options: { label: string; value: string }[]
 	errorMessage?: string
 	className?: string
 	selected: string | undefined
@@ -33,6 +34,7 @@ const selectContext = createContext<SelectContext | null>(null)
 export function Select({
 	children,
 	label,
+	options,
 	errorMessage,
 	className,
 	selected,
@@ -59,14 +61,14 @@ export function Select({
 				</label>
 				<button
 					type="button"
-					className={`${showDropdown && 'text-gray-500'} flex w-full! items-center justify-between rounded-2xl border border-gray-200 p-3 duration-300 hover:bg-gray-100`}
+					className={`${showDropdown && 'text-gray-500'} flex w-full! items-center justify-between rounded-2xl border border-gray-200 p-3 duration-300 hover:bg-gray-100 disabled:cursor-default disabled:hover:bg-transparent`}
 					disabled={isDisabled}
 					onClick={() => setShowDropdown(!showDropdown)}>
-					{selected ? (
-						<span className="capitalize">{selected}</span>
-					) : (
-						<span>None selected</span>
-					)}
+					<span>
+						{selected
+							? options.find((o) => o.value === selected)?.label
+							: 'None selected'}
+					</span>
 					<SelectArrowIcon
 						className={` ${showDropdown ? 'rotate-180' : 'rotate-0'} duration-400`}
 					/>
@@ -88,7 +90,7 @@ export function Select({
 								duration: 0.4
 							}}
 							className="shadow-card absolute top-full left-0 z-20 w-full -translate-y-4 overflow-hidden rounded-2xl bg-white">
-							<ul className="p-2">{children}</ul>
+							<ul className="p-2">{children(() => options)}</ul>
 						</motion.div>
 					)}
 				</AnimatePresence>
@@ -127,3 +129,5 @@ export function SelectItem({
 		</li>
 	)
 }
+
+//options.find(o => o.value === selected)

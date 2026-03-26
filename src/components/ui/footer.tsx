@@ -65,12 +65,7 @@ export default function Footer() {
 
 				<ul className="flex flex-col gap-y-3">
 					<li className="font-medium">Support</li>
-					{[
-						'Payment Procedure',
-						'Hiring Process',
-						'Joining Process',
-						'Contact'
-					].map((item) => (
+					{['Payment Procedure', 'Joining Process', 'Contact'].map((item) => (
 						<li key={item}>
 							<Link
 								href={`/${item.toLowerCase().replace(' ', '-')}`}
@@ -83,7 +78,7 @@ export default function Footer() {
 
 				<ul className="flex flex-col gap-y-3">
 					<li className="font-medium">Company</li>
-					{['About Gaenr', 'Careers', 'Blogs'].map((item) => (
+					{['About Gaenr', 'Blogs'].map((item) => (
 						<li key={item}>
 							<Link
 								href={`/${item.toLowerCase().replace(' ', '-')}`}
@@ -109,8 +104,8 @@ export default function Footer() {
 					)}
 				</ul>
 
-				<div className="col-span-full grid grid-cols-1 place-items-center gap-y-6 md:grid-cols-[max-content_1fr] md:gap-y-3">
-					<ul className="flex items-center gap-x-6 md:row-start-2 md:place-self-start">
+				<div className="col-span-full grid grid-cols-1 place-items-center gap-y-6 md:grid-cols-[max-content_1fr] md:gap-y-5">
+					<ul className="flex h-full items-center gap-x-6 md:row-start-2 md:place-self-start">
 						<li>
 							<Link
 								href="#"
@@ -147,15 +142,15 @@ export default function Footer() {
 					<p className="text-sm md:col-start-1">
 						&copy; {new Date().getFullYear()} Gaenr. All rights reserved.
 					</p>
-					<div className="flex items-end justify-center gap-x-3 rounded-xl border border-gray-800 px-4 py-2 md:place-self-end">
+					<div className="flex items-end justify-center gap-x-3 rounded-xl border border-gray-800 px-4 py-2 md:row-start-2 md:place-self-end">
 						<Image
 							src="/flag.png"
 							alt="Palestine Flag"
 							width={28}
 							height={28}
 						/>
-						<p className="text-sm font-medium">
-							From the river to the sea, Palestine will be free
+						<p className="-translate-y-px text-sm font-medium">
+							We stand with Palestine.
 						</p>
 					</div>
 				</div>

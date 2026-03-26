@@ -14,10 +14,17 @@ export default function Modal({
 		if (!isOpen) return
 
 		const defaultOverflow = document.body.style.overflow
+
+		function callback(e: KeyboardEvent) {
+			if (e.key === 'Escape') onOpenChange(false)
+		}
+
 		document.body.style.overflow = 'hidden'
+		document.addEventListener('keydown', callback)
 
 		return () => {
 			document.body.style.overflow = defaultOverflow
+			document.removeEventListener('keydown', callback)
 		}
 	}, [isOpen])
 

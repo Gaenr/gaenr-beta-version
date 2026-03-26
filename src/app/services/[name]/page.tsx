@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { CloseIcon, HomeIcon, StarFillIcon, TakaIcon } from '@/components/icons'
 import { CheckIcon } from '@/components/icons/check'
 import { BreadcrumbItem, Breadcrumbs } from '@/components/ui/breadcrumbs'
-import MiniLink from '@/components/ui/mini-link'
 
 export const metadata: Metadata = {
 	title: 'Graphics Design Service'
@@ -108,8 +107,6 @@ export default function Page() {
 						</li>
 					))}
 				</ul>
-
-				<MiniLink href="/experts">View all</MiniLink>
 			</section>
 
 			<section className="mx-auto my-12 w-full max-w-5xl space-y-8 px-6 lg:my-16 lg:space-y-10">

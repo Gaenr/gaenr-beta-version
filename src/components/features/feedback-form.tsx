@@ -14,6 +14,22 @@ import FeedbackFormSchema from '@/lib/feedback-form.schema'
 
 type FormData = z.infer<typeof FeedbackFormSchema>
 
+const sharedByOptions: { label: string; value: FormData['sharedBy'] }[] = [
+	{ label: 'Client', value: 'client' },
+	{ label: 'Freelancer', value: 'freelancer' },
+	{ label: 'Visitor', value: 'visitor' }
+]
+
+const feedbackTypeOptions: {
+	label: string
+	value: FormData['feedbackType']
+}[] = [
+	{ label: 'Suggestion', value: 'suggestion' },
+	{ label: 'Bug report', value: 'bug_report' },
+	{ label: 'Feature request', value: 'feature_request' },
+	{ label: 'Other', value: 'other' }
+]
+
 export default function FeedbackForm() {
 	const {
 		register,
@@ -53,20 +69,19 @@ export default function FeedbackForm() {
 				control={control}
 				render={({ field: { value, onChange } }) => (
 					<Select
-						label="Share feedback as"
+						label="Share Feedback as"
+						options={sharedByOptions}
 						errorMessage={errors.sharedBy?.message}
 						selected={value}
 						onChange={onChange}
 						isRequired>
-						<SelectItem value="client" key="client">
-							Client
-						</SelectItem>
-						<SelectItem value="freelancer" key="freelancer">
-							Freelancer
-						</SelectItem>
-						<SelectItem value="visitor" key="visitor">
-							Visitor
-						</SelectItem>
+						{(options) =>
+							options().map((option) => (
+								<SelectItem value={option.value} key={option.value}>
+									{option.label}
+								</SelectItem>
+							))
+						}
 					</Select>
 				)}
 			/>
@@ -75,29 +90,25 @@ export default function FeedbackForm() {
 				control={control}
 				render={({ field: { value, onChange } }) => (
 					<Select
-						label="Feedback type"
-						errorMessage={errors.sharedBy?.message}
+						label="Feedback Type"
+						options={feedbackTypeOptions}
+						errorMessage={errors.feedbackType?.message}
 						selected={value}
 						onChange={onChange}
 						isRequired>
-						<SelectItem value="suggestion" key="suggestion">
-							Suggestion
-						</SelectItem>
-						<SelectItem value="bug report" key="bug report">
-							Bug Report
-						</SelectItem>
-						<SelectItem value="feature request" key="feature request">
-							Feature Request
-						</SelectItem>
-						<SelectItem value="other" key="other">
-							Other
-						</SelectItem>
+						{(options) =>
+							options().map((option) => (
+								<SelectItem value={option.value} key={option.value}>
+									{option.label}
+								</SelectItem>
+							))
+						}
 					</Select>
 				)}
 			/>
 			<Textarea
 				id="feedback"
-				label="Your feedback"
+				label="Your Feedback"
 				classNames={{ base: 'col-span-full' }}
 				register={register('message')}
 				errorMessage={errors.message?.message}

@@ -15,7 +15,7 @@ const FeedbackFormSchema = z.object({
 		.or(z.literal('')),
 	sharedBy: z.enum(['client', 'freelancer', 'visitor'], 'Select an option'),
 	feedbackType: z.enum(
-		['suggestion', 'bug report', 'feature request', 'other'],
+		['suggestion', 'bug_report', 'feature_request', 'other'],
 		'Select a feedback type'
 	),
 	message: z

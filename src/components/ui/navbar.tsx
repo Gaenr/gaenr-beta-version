@@ -43,15 +43,13 @@ export default function NavBar() {
 
 	return (
 		<>
-			<nav className="sticky inset-x-0 top-0 z-50 flex h-auto w-full flex-wrap items-center justify-center border-b border-slate-100 bg-white/70 backdrop-blur-lg backdrop-saturate-150">
+			<nav className="sticky inset-x-0 top-0 z-50 flex h-auto w-full flex-wrap items-center justify-center border-b border-gray-100 bg-white/70 backdrop-blur-lg backdrop-saturate-150">
 				<div className="max-w-8xl flex h-(--navbar-height) w-full flex-nowrap items-center justify-between px-6">
 					<ul>
 						<li>
 							<Link href="/" className="flex items-center gap-x-3 lg:gap-x-4">
-								<div className="relative size-9 lg:size-11">
-									<Logo className="h-auto w-full" />
-								</div>
-								<p className="text-3xl font-bold text-gray-800 lg:text-4xl">
+								<Logo className="size-9 lg:size-11" />
+								<p className="text-3xl font-bold text-blue-950 lg:text-4xl">
 									Gaenr
 								</p>
 							</Link>
@@ -158,7 +156,7 @@ export default function NavBar() {
 
 			<Modal isOpen={isOpen} onOpenChange={onOpenChange}>
 				{() => (
-					<main className="no-scrollbar block max-h-[80dvh] w-[85dvw] space-y-10 overflow-y-auto rounded-4xl bg-white p-6 sm:p-8 md:w-2xl lg:w-3xl">
+					<main className="no-scrollbar block max-h-[80dvh] w-[85dvw] space-y-10 overflow-y-auto rounded-4xl bg-white p-6 sm:p-10 md:w-2xl lg:w-3xl">
 						<article className="flex flex-col items-center gap-y-2 px-6">
 							<Logo className="mx-auto mb-3 size-11" />
 							<h2 className="text-primary-dark text-2xl font-semibold sm:text-xl">
@@ -170,7 +168,7 @@ export default function NavBar() {
 							</p>
 						</article>
 
-						<AssignTaskForm />
+						<AssignTaskForm onClose={() => onOpenChange(false)} />
 					</main>
 				)}
 			</Modal>
