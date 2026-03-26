@@ -45,7 +45,7 @@ export default function Textarea({
 				value={value}
 				defaultValue={defaultValue}
 				placeholder={placeholder}
-				className="h-50 w-full resize-none rounded-2xl border border-gray-200 p-3 duration-300 outline-none placeholder:text-gray-500 hover:bg-gray-100 focus:border-gray-400"
+				className="h-50 w-full resize-none rounded-2xl border border-gray-200 p-3 duration-300 outline-none placeholder:text-gray-400 hover:bg-gray-100 focus:border-gray-400"
 				readOnly={isReadOnly}
 				disabled={isDisabled}
 				{...register}

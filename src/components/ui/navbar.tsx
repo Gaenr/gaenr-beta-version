@@ -133,7 +133,7 @@ export default function NavBar() {
 						key="menu">
 						<ul className="flex max-w-full flex-col gap-y-4">
 							<li className="mb-2">
-								<Link href="/" onClick={() => setShowMenu(false)}>
+								<Link href="/assign-task" onClick={() => setShowMenu(false)}>
 									<Button color="primary" sizes="md">
 										Assign Task
 									</Button>

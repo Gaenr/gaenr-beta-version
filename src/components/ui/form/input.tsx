@@ -53,7 +53,7 @@ export default function Input({
 				defaultValue={defaultValue}
 				placeholder={placeholder}
 				autoComplete={label}
-				className={`${classNames?.input} rounded-2xl border border-gray-200 p-3 duration-300 outline-none placeholder:text-gray-500 hover:bg-gray-100 focus:border-gray-400`}
+				className={`${classNames?.input} rounded-2xl border border-gray-200 p-3 duration-300 outline-none placeholder:text-gray-400 hover:bg-gray-100 focus:border-gray-400`}
 				readOnly={isReadOnly}
 				disabled={isDisabled}
 				{...register}

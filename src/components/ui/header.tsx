@@ -1,7 +1,6 @@
 import Link from 'next/link'
 
 import Button from '@/components/ui/button'
-import SearchBar from '@/components/ui/searchbar'
 
 export default function Header() {
 	return (
@@ -9,18 +8,18 @@ export default function Header() {
 			<div className="lg:max-w-8xl mx-auto grid w-full max-w-3xl grid-cols-1 items-center gap-y-16 lg:grid-cols-2 lg:gap-x-24">
 				<section className="flex flex-col items-center gap-y-8 sm:gap-y-12">
 					<article className="flex flex-col items-center gap-y-4 lg:items-start lg:gap-y-8">
-						<h1 className="flex flex-col items-center text-[clamp(1rem,7vw,2rem)] font-bold text-white uppercase sm:text-[clamp(1rem,7vw,3rem)] lg:items-start lg:gap-y-3 lg:text-5xl">
+						<h1 className="flex flex-col items-center text-[clamp(1rem,7vw,2rem)] font-bold text-white uppercase sm:text-[clamp(1rem,7vw,3rem)] sm:leading-13 lg:items-start lg:gap-y-3 lg:text-5xl">
 							<p>Stop wasting time</p>
 							<p>Start getting results</p>
 						</h1>
-						<p className="hidden text-center text-white sm:block lg:text-left">
+						<p className="hidden text-center text-lg text-white sm:block lg:text-left">
 							Assign projects with ease and get reliable results. Gaenr connects
 							you with verified student experts who deliver efficiently, so you
 							can focus on what matters
 						</p>
 					</article>
 
-					<div className="w-full space-y-3 self-stretch lg:max-w-xl">
+					{/* <div className="w-full space-y-3 self-stretch lg:max-w-xl">
 						<SearchBar />
 						<div className="hidden items-center gap-x-3 px-6 sm:flex">
 							<p className="text-xs font-semibold text-white">Popular</p>
@@ -48,7 +47,7 @@ export default function Header() {
 								</li>
 							</ul>
 						</div>
-					</div>
+					</div> */}
 
 					<div className="flex items-center gap-x-3 lg:self-start">
 						<Link href="/assign-task">

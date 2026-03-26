@@ -11,8 +11,13 @@ import Testimonials from '@/components/ui/testimonials'
 import { CLIENT_BENEFITS } from '@/data/clients-benefit'
 import { PAYMENT_PROCESS_STEPS } from '@/data/payment-process-steps'
 import { SERVICE_NAMES } from '@/utils/constants'
+import { Metadata } from 'next'
 import Image from 'next/image'
 
+export const metadata: Metadata = {
+	title: 'Gaenr | Freelancing platform for Bangladesh',
+	description: ''
+}
 export default function Page() {
 	return (
 		<div>
